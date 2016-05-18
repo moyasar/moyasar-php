@@ -47,7 +47,7 @@ class Client
     
         $client = new GuzzleHttp\Client();
 
-
+ 
         $response = $client->post($request, [
             GuzzleHttp\RequestOptions::AUTH => [self::$apiKey, ""],
             GuzzleHttp\RequestOptions::FORM_PARAMS => $options
