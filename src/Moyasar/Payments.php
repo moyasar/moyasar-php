@@ -18,6 +18,28 @@ class Payments
     const SADAD = "sadad";
     const CREDIT_CARD = "creditcard";
 
+    public static function make($amount, $source, $description = "", $currency = "SAR")
+    {
+
+        $data = [
+            self::AMOUNT => $amount,
+            self::SOURCE => $source,
+            self::DESCRIPTION => $description,
+            self::CURRENCY => $currency
+        ];
+
+        if (empty($description)) {
+            unset($data[self::DESCRIPTION]);
+        }
+        if ($currency == "SAR") {
+            unset($data[self::CURRENCY]);
+        }
+
+
+        self::validate($data);
+        return json_decode(Client::post("https://api.moyasar.com/v1/payments", $data));
+    }
+
     private static function validate($data)
     {
 
@@ -66,29 +88,6 @@ class Payments
         }
 
     }
-
-    public static function make($amount, $source, $description = "", $currency = "SAR")
-    {
-
-        $data = [
-            self::AMOUNT => $amount,
-            self::SOURCE => $source,
-            self::DESCRIPTION => $description,
-            self::CURRENCY => $currency
-        ];
-
-        if (empty($description)) {
-            unset($data[self::DESCRIPTION]);
-        }
-        if ($currency == "SAR") {
-            unset($data[self::CURRENCY]);
-        }
-
-
-        self::validate($data);
-        return json_decode(Client::post("https://api.moyasar.com/v1/payments", $data));
-    }
-
 
     public static function refund($id, $amount = 0)
     {

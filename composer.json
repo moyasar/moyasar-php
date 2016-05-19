@@ -1,5 +1,21 @@
 {
-    "require": {
-        "guzzlehttp/guzzle": "^6.2"
+  "name": "moyasar/moyasar-php",
+  "description": "php api wrapper for moyasar.com",
+  "type": "library",
+  "authors": [
+    {
+      "name": "Sohib H Algotimel",
+      "email": "s@sgh.sa",
+      "homepage": "https://sgh.sa"
     }
+  ],
+  "minimum-stability": "dev",
+  "autoload": {
+    "psr-4": {
+      "Moyasar\\": "src/Moyasar"
+    }
+  },
+  "require": {
+    "guzzlehttp/guzzle": "^6.2"
+  }
 }
