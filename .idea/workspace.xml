@@ -1,0 +1,692 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ec7d5c30-71f4-4a69-b4c2-3250aaf55cb2" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/moyasar-php-master.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Moyasar/Client.php" afterPath="$PROJECT_DIR$/src/Moyasar/Client.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Moyasar/HttpRequestNotFound.php" afterPath="$PROJECT_DIR$/src/Moyasar/HttpRequestNotFound.php" />
+    </list>
+    <ignored path="moyasar-php-master.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="moyasar-php-master" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.17068645">
+              <caret line="4" column="5" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/Payments.php" />
+        <option value="$PROJECT_DIR$/Client.php" />
+        <option value="$PROJECT_DIR$/src/Moyasar/Client.php" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" />
+  <component name="JsBuildToolPackageJson" detection-done="true" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+  </component>
+  <component name="PhpServers">
+    <servers />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="428" />
+    <option name="y" value="121" />
+    <option name="width" value="1849" />
+    <option name="height" value="1044" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="moyasar-php" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="moyasar-php" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="moyasar-php" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="moyasar-php" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="moyasar-php" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Moyasar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Font" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <envs />
+      <method />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ec7d5c30-71f4-4a69-b4c2-3250aaf55cb2" name="Default" comment="" />
+      <created>1463121568326</created>
+      <option name="number" value="Default" />
+      <updated>1463121568326</updated>
+      <workItem from="1463121570225" duration="18000" />
+      <workItem from="1463122093446" duration="1341000" />
+      <workItem from="1463128584539" duration="667000" />
+      <workItem from="1463129541307" duration="2846000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="4872000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="428" y="121" width="1849" height="1044" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35749862" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45552298" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="LAST_COMMIT_MESSAGE" value="" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="6" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Client.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
+          <folding>
+            <marker date="1458590529000" expanded="false" signature="33:220" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="225:1033" placeholder=" @method ResponseInterface get($uri, array $options = []) ..." />
+            <marker date="1458590529000" expanded="true" signature="1075:14587" placeholder="{...}" />
+            <marker date="1458590529000" expanded="true" signature="1153:2667" placeholder=" Clients accept an array of constructor parameters. ..." />
+            <marker date="1458590529000" expanded="true" signature="2721:3058" placeholder="{...}" />
+            <marker date="1458590529000" expanded="true" signature="2769:2835" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="2929:3007" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="3102:3517" placeholder="{...}" />
+            <marker date="1458590529000" expanded="true" signature="3140:3264" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="3596:3895" placeholder="{...}" />
+            <marker date="1458590529000" expanded="true" signature="3750:3887" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="3969:4096" placeholder="{...}" />
+            <marker date="1458590529000" expanded="true" signature="4173:4975" placeholder="{...}" />
+            <marker date="1458590529000" expanded="true" signature="4652:4695" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="5047:5182" placeholder="{...}" />
+            <marker date="1458590529000" expanded="true" signature="5229:5380" placeholder="{...}" />
+            <marker date="1458590529000" expanded="true" signature="5432:5650" placeholder="{...}" />
+            <marker date="1458590529000" expanded="true" signature="5481:5567" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="5659:5752" placeholder=" Configures the default options for a client. ..." />
+            <marker date="1458590529000" expanded="true" signature="5808:7267" placeholder="{...}" />
+            <marker date="1458590529000" expanded="true" signature="5836:6072" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="6188:6246" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="6294:6353" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="6400:6541" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="6662:6727" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="6823:6911" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="6919:7260" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="7058:7175" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="7116:7161" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="7276:7423" placeholder=" Merges default options into the array. ..." />
+            <marker date="1458590529000" expanded="true" signature="7472:8584" placeholder="{...}" />
+            <marker date="1458590529000" expanded="true" signature="7558:7741" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="7941:8294" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="8040:8147" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="8190:8284" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="8462:8552" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="8493:8542" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="8593:8932" placeholder=" Transfers the given request and applies request options. ..." />
+            <marker date="1458590529000" expanded="true" signature="9007:9663" placeholder="{...}" />
+            <marker date="1458590529000" expanded="true" signature="9082:9183" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="9266:9380" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="9497:9576" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="9601:9656" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="9672:9862" placeholder=" Applies the array of request options to a request. ..." />
+            <marker date="1458590529000" expanded="true" signature="9942:14156" placeholder="{...}" />
+            <marker date="1458590529000" expanded="true" signature="10017:10676" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="10065:10447" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="10722:10888" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="11000:11093" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="11137:11419" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="11186:11286" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="11294:11369" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="11460:11669" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="11506:11557" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="11711:12439" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="11963:12429" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="11993:12155" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="12186:12416" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="12481:12878" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="12557:12651" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="12690:12791" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="12919:13163" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="13291:13518" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="13632:14123" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="13797:13929" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="13845:13915" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="14192:14585" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="14" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md" />
+    <entry file="file://$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Client.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
+          <folding>
+            <marker date="1458590529000" expanded="false" signature="33:220" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="225:1033" placeholder=" @method ResponseInterface get($uri, array $options = []) ..." />
+            <marker date="1458590529000" expanded="true" signature="1075:14587" placeholder="{...}" />
+            <marker date="1458590529000" expanded="true" signature="1153:2667" placeholder=" Clients accept an array of constructor parameters. ..." />
+            <marker date="1458590529000" expanded="true" signature="2721:3058" placeholder="{...}" />
+            <marker date="1458590529000" expanded="true" signature="2769:2835" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="2929:3007" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="3102:3517" placeholder="{...}" />
+            <marker date="1458590529000" expanded="true" signature="3140:3264" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="3596:3895" placeholder="{...}" />
+            <marker date="1458590529000" expanded="true" signature="3750:3887" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="3969:4096" placeholder="{...}" />
+            <marker date="1458590529000" expanded="true" signature="4173:4975" placeholder="{...}" />
+            <marker date="1458590529000" expanded="true" signature="4652:4695" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="5047:5182" placeholder="{...}" />
+            <marker date="1458590529000" expanded="true" signature="5229:5380" placeholder="{...}" />
+            <marker date="1458590529000" expanded="true" signature="5432:5650" placeholder="{...}" />
+            <marker date="1458590529000" expanded="true" signature="5481:5567" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="5659:5752" placeholder=" Configures the default options for a client. ..." />
+            <marker date="1458590529000" expanded="true" signature="5808:7267" placeholder="{...}" />
+            <marker date="1458590529000" expanded="true" signature="5836:6072" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="6188:6246" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="6294:6353" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="6400:6541" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="6662:6727" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="6823:6911" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="6919:7260" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="7058:7175" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="7116:7161" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="7276:7423" placeholder=" Merges default options into the array. ..." />
+            <marker date="1458590529000" expanded="true" signature="7472:8584" placeholder="{...}" />
+            <marker date="1458590529000" expanded="true" signature="7558:7741" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="7941:8294" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="8040:8147" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="8190:8284" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="8462:8552" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="8493:8542" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="8593:8932" placeholder=" Transfers the given request and applies request options. ..." />
+            <marker date="1458590529000" expanded="true" signature="9007:9663" placeholder="{...}" />
+            <marker date="1458590529000" expanded="true" signature="9082:9183" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="9266:9380" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="9497:9576" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="9601:9656" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="9672:9862" placeholder=" Applies the array of request options to a request. ..." />
+            <marker date="1458590529000" expanded="true" signature="9942:14156" placeholder="{...}" />
+            <marker date="1458590529000" expanded="true" signature="10017:10676" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="10065:10447" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="10722:10888" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="11000:11093" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="11137:11419" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="11186:11286" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="11294:11369" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="11460:11669" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="11506:11557" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="11711:12439" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="11963:12429" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="11993:12155" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="12186:12416" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="12481:12878" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="12557:12651" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="12690:12791" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="12919:13163" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="13291:13518" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="13632:14123" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="13797:13929" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="13845:13915" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="14192:14585" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Client.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
+          <folding>
+            <marker date="1458590529000" expanded="false" signature="33:220" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="225:1033" placeholder=" @method ResponseInterface get($uri, array $options = []) ..." />
+            <marker date="1458590529000" expanded="true" signature="1075:14587" placeholder="{...}" />
+            <marker date="1458590529000" expanded="true" signature="1153:2667" placeholder=" Clients accept an array of constructor parameters. ..." />
+            <marker date="1458590529000" expanded="true" signature="2721:3058" placeholder="{...}" />
+            <marker date="1458590529000" expanded="true" signature="2769:2835" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="2929:3007" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="3102:3517" placeholder="{...}" />
+            <marker date="1458590529000" expanded="true" signature="3140:3264" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="3596:3895" placeholder="{...}" />
+            <marker date="1458590529000" expanded="true" signature="3750:3887" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="3969:4096" placeholder="{...}" />
+            <marker date="1458590529000" expanded="true" signature="4173:4975" placeholder="{...}" />
+            <marker date="1458590529000" expanded="true" signature="4652:4695" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="5047:5182" placeholder="{...}" />
+            <marker date="1458590529000" expanded="true" signature="5229:5380" placeholder="{...}" />
+            <marker date="1458590529000" expanded="true" signature="5432:5650" placeholder="{...}" />
+            <marker date="1458590529000" expanded="true" signature="5481:5567" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="5659:5752" placeholder=" Configures the default options for a client. ..." />
+            <marker date="1458590529000" expanded="true" signature="5808:7267" placeholder="{...}" />
+            <marker date="1458590529000" expanded="true" signature="5836:6072" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="6188:6246" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="6294:6353" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="6400:6541" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="6662:6727" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="6823:6911" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="6919:7260" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="7058:7175" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="7116:7161" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="7276:7423" placeholder=" Merges default options into the array. ..." />
+            <marker date="1458590529000" expanded="true" signature="7472:8584" placeholder="{...}" />
+            <marker date="1458590529000" expanded="true" signature="7558:7741" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="7941:8294" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="8040:8147" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="8190:8284" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="8462:8552" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="8493:8542" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="8593:8932" placeholder=" Transfers the given request and applies request options. ..." />
+            <marker date="1458590529000" expanded="true" signature="9007:9663" placeholder="{...}" />
+            <marker date="1458590529000" expanded="true" signature="9082:9183" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="9266:9380" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="9497:9576" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="9601:9656" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="9672:9862" placeholder=" Applies the array of request options to a request. ..." />
+            <marker date="1458590529000" expanded="true" signature="9942:14156" placeholder="{...}" />
+            <marker date="1458590529000" expanded="true" signature="10017:10676" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="10065:10447" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="10722:10888" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="11000:11093" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="11137:11419" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="11186:11286" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="11294:11369" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="11460:11669" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="11506:11557" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="11711:12439" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="11963:12429" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="11993:12155" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="12186:12416" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="12481:12878" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="12557:12651" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="12690:12791" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="12919:13163" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="13291:13518" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="13632:14123" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="13797:13929" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="13845:13915" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="14192:14585" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Client.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.18871795">
+          <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
+          <folding>
+            <marker date="1458590529000" expanded="false" signature="33:220" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="225:1033" placeholder=" @method ResponseInterface get($uri, array $options = []) ..." />
+            <marker date="1458590529000" expanded="true" signature="1075:14587" placeholder="{...}" />
+            <marker date="1458590529000" expanded="true" signature="1153:2667" placeholder=" Clients accept an array of constructor parameters. ..." />
+            <marker date="1458590529000" expanded="true" signature="2721:3058" placeholder="{...}" />
+            <marker date="1458590529000" expanded="true" signature="2769:2835" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="2929:3007" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="3102:3517" placeholder="{...}" />
+            <marker date="1458590529000" expanded="true" signature="3140:3264" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="3596:3895" placeholder="{...}" />
+            <marker date="1458590529000" expanded="true" signature="3750:3887" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="3969:4096" placeholder="{...}" />
+            <marker date="1458590529000" expanded="true" signature="4173:4975" placeholder="{...}" />
+            <marker date="1458590529000" expanded="true" signature="4652:4695" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="5047:5182" placeholder="{...}" />
+            <marker date="1458590529000" expanded="true" signature="5229:5380" placeholder="{...}" />
+            <marker date="1458590529000" expanded="true" signature="5432:5650" placeholder="{...}" />
+            <marker date="1458590529000" expanded="true" signature="5481:5567" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="5659:5752" placeholder=" Configures the default options for a client. ..." />
+            <marker date="1458590529000" expanded="true" signature="5808:7267" placeholder="{...}" />
+            <marker date="1458590529000" expanded="true" signature="5836:6072" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="6188:6246" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="6294:6353" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="6400:6541" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="6662:6727" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="6823:6911" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="6919:7260" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="7058:7175" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="7116:7161" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="7276:7423" placeholder=" Merges default options into the array. ..." />
+            <marker date="1458590529000" expanded="true" signature="7472:8584" placeholder="{...}" />
+            <marker date="1458590529000" expanded="true" signature="7558:7741" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="7941:8294" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="8040:8147" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="8190:8284" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="8462:8552" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="8493:8542" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="8593:8932" placeholder=" Transfers the given request and applies request options. ..." />
+            <marker date="1458590529000" expanded="true" signature="9007:9663" placeholder="{...}" />
+            <marker date="1458590529000" expanded="true" signature="9082:9183" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="9266:9380" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="9497:9576" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="9601:9656" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="9672:9862" placeholder=" Applies the array of request options to a request. ..." />
+            <marker date="1458590529000" expanded="true" signature="9942:14156" placeholder="{...}" />
+            <marker date="1458590529000" expanded="true" signature="10017:10676" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="10065:10447" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="10722:10888" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="11000:11093" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="11137:11419" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="11186:11286" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="11294:11369" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="11460:11669" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="11506:11557" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="11711:12439" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="11963:12429" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="11993:12155" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="12186:12416" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="12481:12878" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="12557:12651" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="12690:12791" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="12919:13163" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="13291:13518" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="13632:14123" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="13797:13929" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="13845:13915" placeholder="..." />
+            <marker date="1458590529000" expanded="true" signature="14192:14585" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/psr/http-message/src/ResponseInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="20" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="2" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="6" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/RequestOptions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="118" column="36" selection-start-line="118" selection-start-column="25" selection-end-line="118" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Moyasar/Payments.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.6420513">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1463683445000" expanded="false" signature="9:84" placeholder=" Created by PhpStorm. ..." />
+            <marker date="1463683445000" expanded="true" signature="123:2992" placeholder="{...}" />
+            <marker date="1463683445000" expanded="true" signature="409:910" placeholder="{...}" />
+            <marker date="1463683445000" expanded="true" signature="434:604" placeholder="..." />
+            <marker date="1463683445000" expanded="true" signature="642:696" placeholder="..." />
+            <marker date="1463683445000" expanded="true" signature="731:782" placeholder="..." />
+            <marker date="1463683445000" expanded="true" signature="955:2502" placeholder="{...}" />
+            <marker date="1463683445000" expanded="true" signature="1004:1082" placeholder="..." />
+            <marker date="1463683445000" expanded="true" signature="1121:1199" placeholder="..." />
+            <marker date="1463683445000" expanded="true" signature="1275:1361" placeholder="..." />
+            <marker date="1463683445000" expanded="true" signature="1401:2415" placeholder="..." />
+            <marker date="1463683445000" expanded="true" signature="1452:2089" placeholder="..." />
+            <marker date="1463683445000" expanded="true" signature="1500:1602" placeholder="..." />
+            <marker date="1463683445000" expanded="true" signature="1653:1754" placeholder="..." />
+            <marker date="1463683445000" expanded="true" signature="1804:1915" placeholder="..." />
+            <marker date="1463683445000" expanded="true" signature="1964:2073" placeholder="..." />
+            <marker date="1463683445000" expanded="true" signature="2128:2296" placeholder="..." />
+            <marker date="1463683445000" expanded="true" signature="2179:2281" placeholder="..." />
+            <marker date="1463683445000" expanded="true" signature="2304:2405" placeholder="..." />
+            <marker date="1463683445000" expanded="true" signature="2423:2494" placeholder="..." />
+            <marker date="1463683445000" expanded="true" signature="2555:2732" placeholder="{...}" />
+            <marker date="1463683445000" expanded="true" signature="2579:2624" placeholder="..." />
+            <marker date="1463683445000" expanded="true" signature="2776:2865" placeholder="..." />
+            <marker date="1463683445000" expanded="true" signature="2901:2987" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Moyasar/Invoices.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1463681663000" expanded="false" signature="9:84" placeholder=" Created by PhpStorm. ..." />
+            <marker date="1463681663000" expanded="true" signature="123:814" placeholder="{...}" />
+            <marker date="1463681663000" expanded="true" signature="301:556" placeholder="{...}" />
+            <marker date="1463681663000" expanded="true" signature="326:459" placeholder="..." />
+            <marker date="1463681663000" expanded="true" signature="599:688" placeholder="..." />
+            <marker date="1463681663000" expanded="true" signature="724:809" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Moyasar/Client.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.57054263">
+          <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+          <folding>
+            <marker date="1463691067000" expanded="false" signature="9:83" placeholder=" Created by PhpStorm. ..." />
+            <marker date="1463691067000" expanded="false" signature="111:147" placeholder="..." />
+            <marker date="1463691067000" expanded="true" signature="161:1456" placeholder="{...}" />
+            <marker date="1463691067000" expanded="true" signature="261:295" placeholder=" @param mixed $apiKey ..." />
+            <marker date="1463691067000" expanded="true" signature="343:388" placeholder="{...}" />
+            <marker date="1463691067000" expanded="true" signature="445:847" placeholder="{...}" />
+            <marker date="1463691067000" expanded="true" signature="681:746" placeholder="..." />
+            <marker date="1463691067000" expanded="true" signature="906:1452" placeholder="{...}" />
+            <marker date="1463691067000" expanded="true" signature="974:1171" placeholder="..." />
+            <marker date="1463691067000" expanded="true" signature="1287:1352" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.17068645">
+          <caret line="4" column="5" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
