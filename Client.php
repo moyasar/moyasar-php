@@ -28,12 +28,8 @@ class Client
 
     public static function get($request, $options = [])
     {
-        $options = [
-            'auth' => [self::$apiKey, '']
-        ];
-
+        $options[GuzzleHttp\RequestOptions::AUTH] = [self::$apiKey, ''];
         $client = new GuzzleHttp\Client();
-
         $response = $client->get($request, $options);
         if ($response->getStatusCode() == '200' OR '201') {
             return $response->getBody()->getContents();
@@ -45,13 +41,17 @@ class Client
 
     public static function post($request, $options = [])
     {
-//        var_dump(json_encode($options));
         $client = new GuzzleHttp\Client();
 
-        $options["auth"] =  [self::$apiKey, ''];
+        $data = [
+            GuzzleHttp\RequestOptions::AUTH => [self::$apiKey, ''],
+            GuzzleHttp\RequestOptions::FORM_PARAMS => $options,
+            GuzzleHttp\RequestOptions::DEBUG => false
 
-        $response = $client->post($request, $options);
-//        $response = $request->send();
+
+        ];
+
+        $response = $client->post($request, $data);
 
         if ($response->getStatusCode() == '200' OR '201') {
             return $response->getBody()->getContents();
