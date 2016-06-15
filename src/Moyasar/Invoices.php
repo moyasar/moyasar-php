@@ -15,7 +15,7 @@ class Invoices
     const CURRENCY = "currency";
     const DESCRIPTION = "description";
 
-    public static function make($amount, $description, $currency = "SAR")
+    public static function create($amount, $description, $currency = "SAR")
     {
 
         $data = [
@@ -27,11 +27,11 @@ class Invoices
         return json_decode(Client::post("https://api.moyasar.com/v1/invoices", $data));
     }
 
-    public static function retrieve($id){
+    public static function fetch($id){
         return json_decode(Client::get("https://api.moyasar.com/v1/invoices/$id"));
     }
 
-    public static function all(){
+    public static function list(){
         return json_decode(Client::get("https://api.moyasar.com/v1/invoices"));
     }
 
