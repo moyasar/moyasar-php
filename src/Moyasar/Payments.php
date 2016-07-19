@@ -18,7 +18,7 @@ class Payments
     const SADAD = "sadad";
     const CREDIT_CARD = "creditcard";
 
-    public static function make($amount, $source, $description = "", $currency = "SAR")
+    public static function create($amount, $source, $description = "", $currency = "SAR")
     {
 
         $data = [
@@ -99,11 +99,11 @@ class Payments
     }
 
 
-    public static function retrieve($id){
+    public static function fetch($id){
         return json_decode(Client::get("https://api.moyasar.com/v1/payments/$id"));
     }
 
-    public static function all(){
+    public static function list(){
         return json_decode(Client::get("https://api.moyasar.com/v1/payments"));
 
     }
