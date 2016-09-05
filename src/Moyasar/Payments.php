@@ -103,7 +103,7 @@ class Payments
         return json_decode(Client::get("https://api.moyasar.com/v1/payments/$id"));
     }
 
-    public static function list(){
+    public static function all(){
         return json_decode(Client::get("https://api.moyasar.com/v1/payments"));
 
     }
