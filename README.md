@@ -16,4 +16,5 @@ See the [PHP API docs](https://moyasar.com/docs/api/?php)
 ## Installation
 
 You can install it via [composer](https://getcomposer.org/)
+
     $ composer require moyasar/moyasar-php
