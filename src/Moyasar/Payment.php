@@ -9,7 +9,7 @@
 namespace Moyasar;
 
 
-class Payments
+class Payment
 {
     const AMOUNT = "amount";
     const CURRENCY = "currency";
