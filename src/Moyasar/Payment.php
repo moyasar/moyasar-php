@@ -17,15 +17,17 @@ class Payment
     const SOURCE = "source";
     const SADAD = "sadad";
     const CREDIT_CARD = "creditcard";
+    const CALLBACK_URL = "callback_url";
 
-    public static function create($amount, $source, $description = "", $currency = "SAR")
+    public static function create($amount, $source, $description = "", $currency = "SAR", $callback_url)
     {
 
         $data = [
             self::AMOUNT => $amount,
             self::SOURCE => $source,
             self::DESCRIPTION => $description,
-            self::CURRENCY => $currency
+            self::CURRENCY => $currency,
+            self::CALLBACK_URL => $callback_url
         ];
 
         if (empty($description)) {
