@@ -49,6 +49,8 @@ class Payment
             throw  new \InvalidArgumentException("Amount is empty");
         } elseif (empty($data[self::SOURCE])) {
             throw  new \InvalidArgumentException("Source is empty");
+        } elseif (empty($data[self::CALLBACK_URL])) {
+            throw new \InvalidArgumentException("Callback_url is empty");
         }
 
         $source = $data[self::SOURCE];
