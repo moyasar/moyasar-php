@@ -7,7 +7,6 @@
  */
 
 namespace Moyasar;
-use GuzzleHttp;
 
 class Payment
 {
