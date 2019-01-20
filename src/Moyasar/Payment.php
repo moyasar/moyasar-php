@@ -7,7 +7,7 @@
  */
 
 namespace Moyasar;
-
+use GuzzleHttp;
 
 class Payment
 {
@@ -110,5 +110,11 @@ class Payment
 
     }
 
+    public static function update($id, $description = ""){
+	    $data = [
+		    self::DESCRIPTION => $description
+	    ];
+	    return json_decode(Client::put("https://api.moyasar.com/v1/payments/$id", $data));
+    }
 
 }
