@@ -35,5 +35,13 @@ class Invoice
         return json_decode(Client::get("https://api.moyasar.com/v1/invoices"));
     }
 
+    public static function update($id,$parameter = [] ){
+	    return json_decode(Client::put("https://api.moyasar.com/v1/invoices/$id", $parameter));
+    }
+
+    public static function cancel($id){
+	    return json_decode(Client::put("https://api.moyasar.com/v1/invoices/$id/cancel"));
+    }
+
 
 }
