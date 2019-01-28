@@ -1,12 +1,15 @@
 {
   "name": "moyasar/moyasar-php",
-  "description": "php api wrapper for moyasar.com",
+  "description": "PHP wrapper library for Moyasar Payment Service",
   "type": "library",
   "authors": [
     {
       "name": "Sohib H Algotimel",
       "email": "s@sgh.sa",
       "homepage": "https://sgh.sa"
+    },
+    {
+      "name": "Moyasar Dev Team"
     }
   ],
   "minimum-stability": "dev",
