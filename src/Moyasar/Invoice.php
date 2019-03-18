@@ -11,10 +11,6 @@ namespace Moyasar;
 
 class Invoice
 {
-    const AMOUNT = "amount";
-    const CURRENCY = "currency";
-    const DESCRIPTION = "description";
-
 
     public static function fetch($id){
         return json_decode(Client::get("https://api.moyasar.com/v1/invoices/$id"));
@@ -31,6 +27,4 @@ class Invoice
     public static function cancel($id){
 	    return json_decode(Client::put("https://api.moyasar.com/v1/invoices/$id/cancel"));
     }
-
-
 }

@@ -11,14 +11,8 @@ namespace Moyasar;
 class Payment
 {
     const AMOUNT = "amount";
-    const CURRENCY = "currency";
     const DESCRIPTION = "description";
     const SOURCE = "source";
-    const SADAD = "sadad";
-    const CREDIT_CARD = "creditcard";
-    const CALLBACK_URL = "callback_url";
-
-
 
     private static function validate($data)
     {
