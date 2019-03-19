@@ -2,6 +2,7 @@
   "name": "moyasar/moyasar-php",
   "description": "PHP wrapper library for Moyasar Payment Service",
   "type": "library",
+  "license": "MIT",
   "authors": [
     {
       "name": "Sohib H Algotimel",
@@ -9,7 +10,9 @@
       "homepage": "https://sgh.sa"
     },
     {
-      "name": "Moyasar Dev Team"
+      "name": "Moyasar Dev Team",
+      "email": "developers@moyasar.com",
+      "homepage": "https://moyasar.com/"
     }
   ],
   "minimum-stability": "dev",
