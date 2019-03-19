@@ -42,6 +42,4 @@ class Invoice
     public static function cancel($id){
 	    return json_decode(Client::put("https://api.moyasar.com/v1/invoices/$id/cancel"));
     }
-
-
 }
