@@ -1,5 +1,5 @@
 {
-  "name": "moyasar/moyasar-php",
+  "name": "moyasar/moyasar",
   "description": "PHP wrapper library for Moyasar Payment Service",
   "type": "library",
   "license": "MIT",
