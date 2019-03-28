@@ -23,7 +23,7 @@ See the [PHP API docs](https://moyasar.com/docs/api/?php)
 
 You can install it via [composer](https://getcomposer.org/)
 
-    $ composer require moyasar/moyasar-php
+    $ composer require moyasar/moyasar
 
 ## Contributing
 
