@@ -10,7 +10,7 @@ See the [PHP API docs](https://moyasar.com/docs/api/?php)
 
 ## Requirements
 
-- PHP 5.5.0
+- PHP 5.6.0
 - guzzlehttp/guzzle: ^6.3.0
 
 #### Notes

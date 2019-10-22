@@ -3,7 +3,12 @@
   "description": "PHP wrapper library for Moyasar Payment Service",
   "type": "library",
   "license": "MIT",
+  "minimum-stability": "dev",
   "authors": [
+    {
+      "name": "Ali Alhoshaiyan",
+      "email": "alialhoshaiyan@gmail.com"
+    },
     {
       "name": "Sohib H Algotimel",
       "email": "s@sgh.sa",
@@ -15,13 +20,22 @@
       "homepage": "https://moyasar.com/"
     }
   ],
-  "minimum-stability": "dev",
+  "require": {
+    "guzzlehttp/guzzle": "^6.3.0",
+    "ext-json": "*",
+    "mockery/mockery": "1.2.4"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "5.7.27"
+  },
   "autoload": {
     "psr-4": {
-      "Moyasar\\": "src/Moyasar"
+      "Moyasar\\": "src/"
     }
   },
-  "require": {
-    "guzzlehttp/guzzle": "^6.3.0"
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests/"
+    }
   }
 }

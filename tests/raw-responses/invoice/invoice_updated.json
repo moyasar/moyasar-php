@@ -1,0 +1,42 @@
+{
+  "id": "915fc838-f2c6-46ec-be44-4a93c9500f5f",
+  "status": "paid",
+  "amount": 10000,
+  "currency": "SAR",
+  "description": "Food Delivery Payment",
+  "logo_url": "https://s3-eu-west-1.amazonaws.com/moyasar.api.assets.prod/entities/logos/default.png",
+  "amount_format": "70.00 SAR",
+  "url": "https://dashboard.moyasar.com/invoices/915fc838-f2c6-46ec-be44-4a93c9500f5f?lang=en",
+  "callback_url": "http://ptsv2.com/t/qf2ql-1562693762/post?orderid=1320",
+  "expired_at": null,
+  "created_at": "2019-07-09T17:37:45.940Z",
+  "updated_at": "2019-07-09T17:38:15.706Z",
+  "payments": [
+    {
+      "id": "ae5e8c6a-1622-45a5-b7ca-9ead69be722e",
+      "status": "paid",
+      "amount": 7000,
+      "fee": 325,
+      "currency": "SAR",
+      "refunded": 0,
+      "refunded_at": null,
+      "description": "Food Delivery Payment",
+      "amount_format": "70.00 SAR",
+      "fee_format": "3.25 SAR",
+      "refunded_format": "0.00 SAR",
+      "invoice_id": "915fc838-f2c6-46ec-be44-4a93c9500f5f",
+      "ip": null,
+      "callback_url": "https://dashboard.moyasar.com/invoices/915fc838-f2c6-46ec-be44-4a93c9500f5f/cc",
+      "created_at": "2019-07-09T17:38:05.431Z",
+      "updated_at": "2019-07-09T17:38:11.050Z",
+      "source": {
+        "type": "creditcard",
+        "company": "visa",
+        "name": "Power Rangers",
+        "number": "XXXX-XXXX-XXXX-1111",
+        "message": "Succeeded!",
+        "transaction_url": "https://api.moyasar.com/v1/transaction_auths/3f99d8fd-9b5b-430a-9f32-ee4e73c8f5da/form"
+      }
+    }
+  ]
+}
