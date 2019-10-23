@@ -23,6 +23,10 @@ class Payment
     public $updatedAt;
     public $source;
     public $description;
+    public $captured;
+    public $formattedCapturedAmount;
+    public $capturedAt;
+    public $voidedAt;
 
     protected $client;
 
@@ -68,8 +72,13 @@ class Payment
         $payment->callbackUrl               = self::extract($data, 'callback_url');
         $payment->createdAt                 = self::extract($data, 'created_at');
         $payment->updatedAt                 = self::extract($data, 'updated_at');
-        $payment->source                    = self::extract($data, 'source');
         $payment->description               = self::extract($data, 'description');
+        $payment->captured                  = self::extract($data, 'captured');
+        $payment->formattedCapturedAmount   = self::extract($data, 'captured_format');
+        $payment->capturedAt                = self::extract($data, 'captured_at');
+        $payment->voidedAt                  = self::extract($data, 'voided_at');
+
+        $payment->source                    = self::extract($data, 'source');
     }
 
     private static function extract($data, $key, $default = null)

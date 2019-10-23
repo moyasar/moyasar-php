@@ -9,7 +9,7 @@ use Moyasar\PaginationResult;
 
 class InvoiceService
 {
-    const INVOICE_URL = '/invoices';
+    const INVOICE_PATH = '/invoices';
 
     /**
      * @var ClientContract
@@ -39,10 +39,10 @@ class InvoiceService
         $arguments = array_merge($this->defaultCreateArguments(), $arguments);
         $this->validateCreateArguments($arguments);
 
-        $response = $this->client->post(self::INVOICE_URL, $arguments);
+        $response = $this->client->post(self::INVOICE_PATH, $arguments);
         $data = $response['body_assoc'];
 
-        return Invoice::fromArray($data);
+        return Invoice::fromArray($data, $this->client);
     }
 
     /**
@@ -102,12 +102,12 @@ class InvoiceService
      */
     public function fetch($id)
     {
-        $response = $this->client->get(self::INVOICE_URL . "/$id");
-        return Invoice::fromArray($response['body_assoc']);
+        $response = $this->client->get(self::INVOICE_PATH . "/$id");
+        return Invoice::fromArray($response['body_assoc'], $this->client);
     }
 
     /**
-     * @param Search|array $query
+     * @param Search|array\null $query
      * @return PaginationResult
      * @throws \GuzzleHttp\Exception\GuzzleException
      * @throws \Moyasar\Exceptions\ApiException
@@ -118,10 +118,10 @@ class InvoiceService
             $query = $query->toArray();
         }
 
-        $response = $this->client->get(self::INVOICE_URL, $query);
+        $response = $this->client->get(self::INVOICE_PATH, $query);
         $data = $response['body_assoc'];
         $meta = $data['meta'];
-        $invoices = array_map(function ($i) { return Invoice::fromArray($i); }, $data['invoices']);
+        $invoices = array_map(function ($i) { return Invoice::fromArray($i, $this->client); }, $data['invoices']);
 
         return PaginationResult::fromArray($meta, $invoices);
     }

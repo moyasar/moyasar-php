@@ -2,6 +2,7 @@
 
 namespace Tests\Feature;
 
+use Moyasar\Contracts\HttpClient;
 use Moyasar\Exceptions\ValidationException;
 use Moyasar\Invoice;
 use Moyasar\Payment;
@@ -40,6 +41,21 @@ class InvoiceServiceTest extends TestCase
         $this->assertInvoiceDataValid($invoice, $invoiceData);
     }
 
+    public function test_invoice_instance_has_client_instance()
+    {
+        $service = $this->mockInvoiceService(200, 'invoice/invoice.json');
+
+        $invoice = $service->fetch('915fc838-f2c6-46ec-be44-4a93c9500f5f');
+
+        $this->assertTrue($invoice instanceof Invoice);
+
+        $refClass = new ReflectionClass(Invoice::class);
+        $refProp = $refClass->getProperty('client');
+        $refProp->setAccessible(true);
+
+        $this->assertTrue($refProp->getValue($invoice) instanceof HttpClient);
+    }
+
     public function test_invoices_are_listed_correctly()
     {
         $service = $this->mockInvoiceService(200, 'invoice/invoice_list.json');
@@ -66,6 +82,25 @@ class InvoiceServiceTest extends TestCase
             $this->assertTrue($invoice instanceof Invoice);
             $invoiceData = $invoicesData[++$current];
             $this->assertInvoiceDataValid($invoice, $invoiceData);
+        }
+    }
+
+    public function test_invoice_instances_have_client_instance()
+    {
+        $service = $this->mockInvoiceService(200, 'invoice/invoice_list.json');
+
+        $pgResult = $service->all();
+
+        $invoices = $pgResult->result;
+
+        foreach ($invoices as $invoice) {
+            $this->assertTrue($invoice instanceof Invoice);
+
+            $refClass = new ReflectionClass(Invoice::class);
+            $refProp = $refClass->getProperty('client');
+            $refProp->setAccessible(true);
+
+            $this->assertTrue($refProp->getValue($invoice) instanceof HttpClient);
         }
     }
 

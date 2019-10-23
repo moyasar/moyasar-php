@@ -178,7 +178,7 @@ class Invoice
     public function update($arguments)
     {
         $this->validateUpdateArguments($arguments);
-        $response = $this->client->put(InvoiceService::INVOICE_URL . "/$this->id");
+        $response = $this->client->put(InvoiceService::INVOICE_PATH . "/$this->id");
         self::updateInstance($this, $response['body_assoc']);
     }
 
@@ -191,7 +191,7 @@ class Invoice
      */
     public function cancel()
     {
-        $response = $this->client->put(InvoiceService::INVOICE_URL . "/$this->id/cancel");
+        $response = $this->client->put(InvoiceService::INVOICE_PATH . "/$this->id/cancel");
         self::updateInstance($this, $response['body_assoc']);
     }
 
