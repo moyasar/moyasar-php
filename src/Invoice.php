@@ -123,6 +123,13 @@ class Invoice
     {
     }
 
+    /**
+     * Creates an Invoice instance using provided data
+     *
+     * @param array $data
+     * @param HttpClient $client
+     * @return self
+     */
     public static function fromArray($data, $client = null)
     {
         $invoice = new self();
@@ -134,6 +141,10 @@ class Invoice
         return $invoice;
     }
 
+    /**
+     * @param self $invoice
+     * @param array $data
+     */
     private static function updateInstance($invoice, $data)
     {
         $invoice->id                = self::extract($data, 'id');
@@ -161,6 +172,12 @@ class Invoice
         $invoice->payments = $paymentObjects;
     }
 
+    /**
+     * @param array $data
+     * @param string $key
+     * @param mixed|null $default
+     * @return mixed|null
+     */
     private static function extract($data, $key, $default = null)
     {
         return isset($data[$key]) ? $data[$key] : $default;

@@ -4,6 +4,10 @@
 namespace Moyasar;
 
 
+use Moyasar\Providers\HttpClient;
+use Moyasar\Exceptions\ValidationException;
+use Moyasar\Providers\PaymentService;
+
 class Payment
 {
     public $id;
@@ -28,22 +32,22 @@ class Payment
     public $capturedAt;
     public $voidedAt;
 
+    /**
+     * @var HttpClient
+     */
     protected $client;
-
-    public function update()
-    {
-        
-    }
-
-    public function refund()
-    {
-        
-    }
 
     private function __construct()
     {
     }
 
+    /**
+     * Creates a Payment instance using provided data
+     *
+     * @param array $data
+     * @param HttpClient $client
+     * @return Payment
+     */
     public static function fromArray($data, $client = null)
     {
         $payment = new self();
@@ -55,6 +59,10 @@ class Payment
         return $payment;
     }
 
+    /**
+     * @param self $payment
+     * @param array $data
+     */
     private static function updateInstance($payment, $data)
     {
         $payment->id                        = self::extract($data, 'id');
@@ -81,8 +89,92 @@ class Payment
         $payment->source                    = self::extract($data, 'source');
     }
 
+    /**
+     * @param array $data
+     * @param string $key
+     * @param mixed|null $default
+     * @return mixed|null
+     */
     private static function extract($data, $key, $default = null)
     {
         return isset($data[$key]) ? $data[$key] : $default;
+    }
+
+    /**
+     * @param string $description
+     * @throws Exceptions\ApiException
+     * @throws ValidationException
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function update($description)
+    {
+        $this->validateDescription($description);
+        $response = $this->client->put(PaymentService::PAYMENT_PATH . "/$this->id");
+        self::updateInstance($this, $response['body_assoc']);
+    }
+
+    /**
+     * Refund the current payment instance
+     *
+     * @param int $amount
+     * @throws Exceptions\ApiException
+     * @throws ValidationException
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function refund($amount)
+    {
+        if ($amount <= 0) {
+            throw new ValidationException('Refund arguments are invalid', [
+                'amount' => ['Amount must be a positive integer']
+            ]);
+        }
+
+        $response = $this->client->post(PaymentService::PAYMENT_PATH . "/$this->id/refund", [
+            'amount' => $amount
+        ]);
+        self::updateInstance($this, $response['body_assoc']);
+    }
+
+    /**
+     * Capture a given amount of the authorized payment instance
+     *
+     * @param int $amount
+     * @throws Exceptions\ApiException
+     * @throws ValidationException
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function capture($amount)
+    {
+        if ($amount <= 0) {
+            throw new ValidationException('Capture arguments are invalid', [
+                'amount' => ['Amount must be a positive integer']
+            ]);
+        }
+
+        $response = $this->client->post(PaymentService::PAYMENT_PATH . "/$this->id/capture", [
+            'amount' => $amount
+        ]);
+        self::updateInstance($this, $response['body_assoc']);
+    }
+
+    /**
+     * Void the current payment instance
+     *
+     * @throws Exceptions\ApiException
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function void()
+    {
+        $response = $this->client->post(PaymentService::PAYMENT_PATH . "/$this->id/void");
+        self::updateInstance($this, $response['body_assoc']);
+    }
+
+    private function validateDescription($description)
+    {
+        if (trim(strlen($description)) == 0) {
+            throw new ValidationException('Payment description is required', [
+                'description' => 'A description is required'
+            ]);
+        }
     }
 }

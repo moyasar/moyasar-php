@@ -68,56 +68,61 @@ class HttpClient implements HttpClientContract
     /**
      * @param $url string
      * @param $data array
+     * @return array
      * @throws ApiException
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function get($url, $data = null)
     {
-        $this->request('get', $url, $data);
+        return $this->request('get', $url, $data);
     }
 
     /**
      * @param $url string
      * @param $data array
+     * @return array
      * @throws ApiException
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function post($url, $data = null)
     {
-        $this->request('post', $url, $data);
+        return $this->request('post', $url, $data);
     }
 
     /**
      * @param $url string
      * @param $data array
+     * @return array
      * @throws ApiException
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function put($url, $data = null)
     {
-        $this->request('put', $url, $data);
+        return $this->request('put', $url, $data);
     }
 
     /**
      * @param $url string
      * @param $data array
+     * @return array
      * @throws ApiException
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function patch($url, $data = null)
     {
-        $this->request('patch', $url, $data);
+        return $this->request('patch', $url, $data);
     }
 
     /**
      * @param $url string
      * @param $data array
+     * @return array
      * @throws ApiException
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function delete($url, $data = null)
     {
-        $this->request('delete', $url, $data);
+        return $this->request('delete', $url, $data);
     }
 
     private function clientOptions()
