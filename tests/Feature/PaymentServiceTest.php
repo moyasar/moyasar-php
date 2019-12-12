@@ -4,6 +4,8 @@ namespace Tests\Feature;
 
 use Moyasar\Contracts\HttpClient;
 use Moyasar\CreditCard;
+use Moyasar\Exceptions\ValidationException;
+use Moyasar\Invoice;
 use Moyasar\Payment;
 use Moyasar\Sadad;
 use ReflectionClass;
@@ -68,9 +70,108 @@ class PaymentServiceTest extends TestCase
         }
     }
 
+    public function test_payment_instances_have_client_instance()
+    {
+        $service = $this->mockPaymentService(200, 'payment/payment_list.json');
+
+        $pgResult = $service->all();
+
+        $payments = $pgResult->result;
+
+        foreach ($payments as $payment) {
+            $this->assertTrue($payment instanceof Payment);
+
+            $refClass = new ReflectionClass(Payment::class);
+            $refProp = $refClass->getProperty('client');
+            $refProp->setAccessible(true);
+
+            $this->assertTrue($refProp->getValue($payment) instanceof HttpClient);
+        }
+    }
+
+    public function test_payment_is_updated_correctly()
+    {
+        $service = $this->mockPaymentService(200, 'payment/payment.json');
+
+        $payment = $service->fetch('ae5e8c6a-1622-45a5-b7ca-9ead69be722e');
+
+        $this->assertTrue($payment instanceof Payment);
+
+        $client = $this->mockHttpClient(200, 'payment/payment_updated.json');
+
+        $reflectionClass = new ReflectionClass(Payment::class);
+        $reflectionProperty = $reflectionClass->getProperty('client');
+        $reflectionProperty->setAccessible(true);
+        $reflectionProperty->setValue($payment, $client);
+
+        $payment->update('Updated Desc');
+
+        $paymentData = $this->getSinglePaymentUpdatedRaw();
+
+        $this->assertPaymentDataValid($payment, $paymentData);
+
+        $this->assertEquals('Updated Desc', $payment->description);
+    }
+
+    public function test_payment_is_refunded_correctly()
+    {
+        $service = $this->mockPaymentService(200, 'payment/payment.json');
+
+        $payment = $service->fetch('ae5e8c6a-1622-45a5-b7ca-9ead69be722e');
+
+        $this->assertTrue($payment instanceof Payment);
+
+        $client = $this->mockHttpClient(200, 'payment/payment_updated.json');
+
+        $reflectionClass = new ReflectionClass(Payment::class);
+        $reflectionProperty = $reflectionClass->getProperty('client');
+        $reflectionProperty->setAccessible(true);
+        $reflectionProperty->setValue($payment, $client);
+
+        $payment->refund(7000);
+
+        $paymentData = $this->getSinglePaymentUpdatedRaw();
+
+        $this->assertPaymentDataValid($payment, $paymentData);
+
+        $this->assertEquals(7000, $payment->refunded);
+        $this->assertEquals('70.00 SAR', $payment->refundedFormat);
+    }
+
+    public function test_payment_refunded_amount_must_not_be_negative()
+    {
+        $service = $this->mockPaymentService(200, 'payment/payment.json');
+
+        $payment = $service->fetch('ae5e8c6a-1622-45a5-b7ca-9ead69be722e');
+
+        $this->expectException(ValidationException::class);
+
+        $payment->refund(-60);
+
+        $this->expectException(ValidationException::class);
+
+        $payment->refund(0);
+    }
+
+    public function test_payment_refunded_amount_must_not_be_zero()
+    {
+        $service = $this->mockPaymentService(200, 'payment/payment.json');
+
+        $payment = $service->fetch('ae5e8c6a-1622-45a5-b7ca-9ead69be722e');
+
+        $this->expectException(ValidationException::class);
+
+        $payment->refund(0);
+    }
+
     protected function getSinglePaymentRaw()
     {
         return json_decode(file_get_contents(__DIR__ . '/../raw-responses/payment/payment.json'), true);
+    }
+
+    protected function getSinglePaymentUpdatedRaw()
+    {
+        return json_decode(file_get_contents(__DIR__ . '/../raw-responses/payment/payment_updated.json'), true);
     }
 
     protected function getSingleUpdatedPaymentRaw()
