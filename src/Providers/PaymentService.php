@@ -36,7 +36,9 @@ class PaymentService
     public function fetch($id)
     {
         $response = $this->client->get(self::PAYMENT_PATH . "/$id");
-        return Payment::fromArray($response['body_assoc'], $this->client);
+        $payment = Payment::fromArray($response['body_assoc']);
+        $payment->setClient($this->client);
+        return $payment;
     }
 
     /**
@@ -56,7 +58,11 @@ class PaymentService
         $response = $this->client->get(self::PAYMENT_PATH, $query);
         $data = $response['body_assoc'];
         $meta = $data['meta'];
-        $payments = array_map(function ($i) { return Payment::fromArray($i, $this->client); }, $data['payments']);
+        $payments = array_map(function ($i) {
+            $payment = Payment::fromArray($i);
+            $payment->setClient($this->client);
+            return $payment;
+        }, $data['payments']);
 
         return PaginationResult::fromArray($meta, $payments);
     }

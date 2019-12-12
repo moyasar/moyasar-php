@@ -273,6 +273,8 @@ class InvoiceServiceTest extends TestCase
     }
 
     /**
+     * Asserts that an Invoice instance equals some raw data
+     *
      * @param Invoice $invoice
      * @param array $invoiceData
      */
@@ -283,7 +285,7 @@ class InvoiceServiceTest extends TestCase
         $this->assertEquals($invoiceData['amount'], $invoice->amount);
         $this->assertEquals($invoiceData['currency'], $invoice->currency);
         $this->assertEquals($invoiceData['description'], $invoice->description);
-        $this->assertEquals($invoiceData['amount_format'], $invoice->formattedAmount);
+        $this->assertEquals($invoiceData['amount_format'], $invoice->amountFormat);
         $this->assertEquals($invoiceData['url'], $invoice->url);
         $this->assertEquals($invoiceData['created_at'], $invoice->createdAt);
         $this->assertEquals($invoiceData['updated_at'], $invoice->updatedAt);
@@ -295,6 +297,7 @@ class InvoiceServiceTest extends TestCase
         if (isset($invoiceData['payments'])) {
             $this->assertTrue(count($invoice->payments) > 0);
 
+            /** @var Payment $payment */
             $payment = $invoice->payments[0];
             $paymentData = $invoiceData['payments'][0];
 
@@ -305,12 +308,12 @@ class InvoiceServiceTest extends TestCase
             $this->assertEquals($paymentData['amount'], $payment->amount);
             $this->assertEquals($paymentData['fee'], $payment->fee);
             $this->assertEquals($paymentData['currency'], $payment->currency);
-            $this->assertEquals($paymentData['refunded'], $payment->refundedAmount);
+            $this->assertEquals($paymentData['refunded'], $payment->refunded);
             $this->assertEquals($paymentData['refunded_at'], $payment->refundedAt);
             $this->assertEquals($paymentData['description'], $payment->description);
-            $this->assertEquals($paymentData['amount_format'], $payment->formattedAmount);
-            $this->assertEquals($paymentData['fee_format'], $payment->formattedFee);
-            $this->assertEquals($paymentData['refunded_format'], $payment->formattedRefundedAmount);
+            $this->assertEquals($paymentData['amount_format'], $payment->amountFormat);
+            $this->assertEquals($paymentData['fee_format'], $payment->feeFormat);
+            $this->assertEquals($paymentData['refunded_format'], $payment->refundedFormat);
             $this->assertEquals($paymentData['invoice_id'], $payment->invoiceId);
             $this->assertEquals($paymentData['ip'], $payment->ip);
             $this->assertEquals($paymentData['callback_url'], $payment->callbackUrl);

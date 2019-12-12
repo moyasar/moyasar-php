@@ -42,7 +42,9 @@ class InvoiceService
         $response = $this->client->post(self::INVOICE_PATH, $arguments);
         $data = $response['body_assoc'];
 
-        return Invoice::fromArray($data, $this->client);
+        $invoice = Invoice::fromArray($data);
+        $invoice->setClient($this->client);
+        return $invoice;
     }
 
     /**
@@ -103,7 +105,9 @@ class InvoiceService
     public function fetch($id)
     {
         $response = $this->client->get(self::INVOICE_PATH . "/$id");
-        return Invoice::fromArray($response['body_assoc'], $this->client);
+        $invoice = Invoice::fromArray($response['body_assoc']);
+        $invoice->setClient($this->client);
+        return $invoice;
     }
 
     /**
@@ -121,7 +125,11 @@ class InvoiceService
         $response = $this->client->get(self::INVOICE_PATH, $query);
         $data = $response['body_assoc'];
         $meta = $data['meta'];
-        $invoices = array_map(function ($i) { return Invoice::fromArray($i, $this->client); }, $data['invoices']);
+        $invoices = array_map(function ($i) {
+            $invoice = Invoice::fromArray($i);
+            $invoice->setClient($this->client);
+            return $invoice;
+        }, $data['invoices']);
 
         return PaginationResult::fromArray($meta, $invoices);
     }

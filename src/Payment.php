@@ -1,103 +1,175 @@
 <?php
 
-
 namespace Moyasar;
-
 
 use Moyasar\Providers\HttpClient;
 use Moyasar\Exceptions\ValidationException;
 use Moyasar\Providers\PaymentService;
 
-class Payment
+class Payment extends OnlineResource
 {
+    /**
+     * Payment ID
+     *
+     * @var string
+     */
     public $id;
+
+    /**
+     * Status of this payment instance
+     *
+     * @var string
+     */
     public $status;
+
+    /**
+     * Payment amount in the lowest unit possible
+     *
+     * @var int
+     */
     public $amount;
+
+    /**
+     * Payment fee in the lowest unit possible
+     *
+     * @var int
+     */
     public $fee;
-    public $refundedAmount;
+
+    /**
+     * Refunded amount in the lowest unit possible
+     *
+     * @var int
+     */
+    public $refunded;
+
+    /**
+     * Date and time this payment was refunded
+     *
+     * @var string
+     */
     public $refundedAt;
-    public $formattedAmount;
-    public $formattedFee;
-    public $formattedRefundedAmount;
+
+    /**
+     * Formatted amount
+     *
+     * @var string
+     */
+    public $amountFormat;
+
+    /**
+     * Formatted fee
+     *
+     * @var string
+     */
+    public $feeFormat;
+
+    /**
+     * Formatted refunded amount
+     *
+     * @var string
+     */
+    public $refundedFormat;
+
+    /**
+     * Currency ISO code
+     *
+     * @var string
+     */
     public $currency;
+
+    /**
+     * If this payment was paid for an invoice, this will hold that invoice ID
+     *
+     * @var string
+     */
     public $invoiceId;
+
+    /**
+     * Client IP address
+     *
+     * @var string
+     */
     public $ip;
+
+    /**
+     * Callback URL
+     *
+     * @var string
+     */
     public $callbackUrl;
+
+    /**
+     * Date and time this payment was created
+     *
+     * @var string
+     */
     public $createdAt;
+
+    /**
+     * Date and time this payment was updated
+     *
+     * @var string
+     */
     public $updatedAt;
+
+    /**
+     * Payment source
+     *
+     * @var Source
+     */
     public $source;
+
+    /**
+     * Description of the payment
+     *
+     * @var string
+     */
     public $description;
+
+    /**
+     * Captured amount
+     *
+     * @var int
+     */
     public $captured;
-    public $formattedCapturedAmount;
+
+    /**
+     * Formatted captured amount
+     *
+     * @var string
+     */
+    public $capturedFormat;
+
+    /**
+     * Date and time this payment was captured
+     *
+     * @var string
+     */
     public $capturedAt;
+
+    /**
+     * Date and time this payment was voided
+     *
+     * @var string
+     */
     public $voidedAt;
 
-    /**
-     * @var HttpClient
-     */
-    protected $client;
-
-    private function __construct()
+    protected function __construct()
     {
     }
 
-    /**
-     * Creates a Payment instance using provided data
-     *
-     * @param array $data
-     * @param HttpClient $client
-     * @return Payment
-     */
-    public static function fromArray($data, $client = null)
+    protected static function transform($key, $value)
     {
-        $payment = new self();
+        if ($key == 'source' && is_array($value) && $value['type'] == 'creditcard') {
+            return CreditCard::fromArray($value);
+        }
 
-        $payment->client = $client;
+        if ($key == 'source' && is_array($value) && $value['type'] == 'sadad') {
+            return Sadad::fromArray($value);
+        }
 
-        self::updateInstance($payment, $data);
-
-        return $payment;
-    }
-
-    /**
-     * @param self $payment
-     * @param array $data
-     */
-    private static function updateInstance($payment, $data)
-    {
-        $payment->id                        = self::extract($data, 'id');
-        $payment->status                    = self::extract($data, 'status');
-        $payment->amount                    = self::extract($data, 'amount');
-        $payment->fee                       = self::extract($data, 'fee');
-        $payment->refundedAmount            = self::extract($data, 'refunded');
-        $payment->refundedAt                = self::extract($data, 'refunded_at');
-        $payment->formattedAmount           = self::extract($data, 'amount_format');
-        $payment->formattedFee              = self::extract($data, 'fee_format');
-        $payment->formattedRefundedAmount   = self::extract($data, 'refunded_format');
-        $payment->currency                  = self::extract($data, 'currency');
-        $payment->invoiceId                 = self::extract($data, 'invoice_id');
-        $payment->ip                        = self::extract($data, 'ip');
-        $payment->callbackUrl               = self::extract($data, 'callback_url');
-        $payment->createdAt                 = self::extract($data, 'created_at');
-        $payment->updatedAt                 = self::extract($data, 'updated_at');
-        $payment->description               = self::extract($data, 'description');
-        $payment->captured                  = self::extract($data, 'captured');
-        $payment->formattedCapturedAmount   = self::extract($data, 'captured_format');
-        $payment->capturedAt                = self::extract($data, 'captured_at');
-        $payment->voidedAt                  = self::extract($data, 'voided_at');
-
-        $payment->source                    = self::extract($data, 'source');
-    }
-
-    /**
-     * @param array $data
-     * @param string $key
-     * @param mixed|null $default
-     * @return mixed|null
-     */
-    private static function extract($data, $key, $default = null)
-    {
-        return isset($data[$key]) ? $data[$key] : $default;
+        return $value;
     }
 
     /**
@@ -109,8 +181,12 @@ class Payment
     public function update($description)
     {
         $this->validateDescription($description);
-        $response = $this->client->put(PaymentService::PAYMENT_PATH . "/$this->id");
-        self::updateInstance($this, $response['body_assoc']);
+
+        $response = $this->client->put(PaymentService::PAYMENT_PATH . "/$this->id", [
+            'description' => $description
+        ]);
+
+        $this->updateFromArray($response['body_assoc']);
     }
 
     /**
@@ -132,7 +208,8 @@ class Payment
         $response = $this->client->post(PaymentService::PAYMENT_PATH . "/$this->id/refund", [
             'amount' => $amount
         ]);
-        self::updateInstance($this, $response['body_assoc']);
+
+        $this->updateFromArray($response['body_assoc']);
     }
 
     /**
@@ -154,7 +231,8 @@ class Payment
         $response = $this->client->post(PaymentService::PAYMENT_PATH . "/$this->id/capture", [
             'amount' => $amount
         ]);
-        self::updateInstance($this, $response['body_assoc']);
+
+        $this->updateFromArray($response['body_assoc']);
     }
 
     /**
@@ -166,7 +244,7 @@ class Payment
     public function void()
     {
         $response = $this->client->post(PaymentService::PAYMENT_PATH . "/$this->id/void");
-        self::updateInstance($this, $response['body_assoc']);
+        $this->updateFromArray($response['body_assoc']);
     }
 
     private function validateDescription($description)
