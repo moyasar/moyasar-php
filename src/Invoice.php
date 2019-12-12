@@ -2,8 +2,6 @@
 
 namespace Moyasar;
 
-use Moyasar\Contracts\HttpClient;
-use Moyasar\Exceptions\ApiException;
 use Moyasar\Exceptions\ValidationException;
 use Moyasar\Providers\InvoiceService;
 

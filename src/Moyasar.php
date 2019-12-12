@@ -2,10 +2,6 @@
 
 namespace Moyasar;
 
-use GuzzleHttp\Exception\ClientException;
-use GuzzleHttp\RequestOptions;
-use Moyasar\Exceptions\ApiException;
-
 class Moyasar
 {
     const API_BASE_URL = 'https://api.moyasar.com';

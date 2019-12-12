@@ -2,7 +2,6 @@
 
 namespace Moyasar;
 
-use Moyasar\Providers\HttpClient;
 use Moyasar\Exceptions\ValidationException;
 use Moyasar\Providers\PaymentService;
 

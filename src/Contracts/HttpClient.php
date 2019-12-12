@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Moyasar\Contracts;
-
 
 interface HttpClient
 {

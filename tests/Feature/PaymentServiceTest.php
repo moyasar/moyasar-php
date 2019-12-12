@@ -5,7 +5,6 @@ namespace Tests\Feature;
 use Moyasar\Contracts\HttpClient;
 use Moyasar\CreditCard;
 use Moyasar\Exceptions\ValidationException;
-use Moyasar\Invoice;
 use Moyasar\Payment;
 use Moyasar\Sadad;
 use ReflectionClass;
