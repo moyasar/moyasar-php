@@ -137,7 +137,7 @@ class Invoice extends OnlineResource
     public function update($arguments)
     {
         $this->validateUpdateArguments($arguments);
-        $response = $this->client->put(InvoiceService::INVOICE_PATH . "/$this->id");
+        $response = $this->client->put(InvoiceService::INVOICE_PATH . "/$this->id", $arguments);
         $this->updateFromArray($response['body_assoc']);
     }
 
