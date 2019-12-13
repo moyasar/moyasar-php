@@ -51,7 +51,25 @@ an environment variable called `MOYASAR_API_KEY`, thus `.env` can be used to add
 MOYASAR_API_KEY=<Your_API_Key>
 ```
 
+If everything goes to plan, you should be able to get `PaymentService` and `InvoiceService`
+from laravel service container by simply called `app` helper function
 
+```php
+app(PaymentService::class)
+```
+
+```php
+app(InvoiceService::class)
+```
+
+Or inside your controller, you can simply type-hint one of the services in the constructor:
+
+```php
+public function __construct(PaymentService $paymentService)
+{
+    $this->paymentService = $paymentService;
+}
+```
 
 ## Contributing
 
