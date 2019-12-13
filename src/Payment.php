@@ -185,7 +185,10 @@ class Payment extends OnlineResource
             'description' => $description
         ]);
 
-        if (! $response['body_assoc']) return;
+        // A fix, because Moyasar won't return an updated instance of the payment
+        if (! $response['body_assoc']) {
+            $response = $this->client->get(PaymentService::PAYMENT_PATH . "/$this->id");
+        };
 
         $this->updateFromArray($response['body_assoc']);
     }
@@ -210,8 +213,6 @@ class Payment extends OnlineResource
             'amount' => $amount
         ]);
 
-        if (! $response['body_assoc']) return;
-
         $this->updateFromArray($response['body_assoc']);
     }
 
@@ -235,6 +236,7 @@ class Payment extends OnlineResource
             'amount' => $amount
         ]);
 
+        // TODO: Make sure response returns something
         if (! $response['body_assoc']) return;
 
         $this->updateFromArray($response['body_assoc']);
@@ -250,6 +252,7 @@ class Payment extends OnlineResource
     {
         $response = $this->client->post(PaymentService::PAYMENT_PATH . "/$this->id/void");
 
+        // TODO: Make sure response returns something
         if (! $response['body_assoc']) return;
 
         $this->updateFromArray($response['body_assoc']);
