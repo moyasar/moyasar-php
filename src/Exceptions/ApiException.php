@@ -9,8 +9,13 @@ class ApiException extends BaseException
     protected $type;
     protected $errors;
 
-    public function __construct($message, $type, $errors, $code = 0, Throwable $previous = null)
+    public function __construct($message, $type, $errors, $code = 0, $previous = null)
     {
+        // Just ignore
+        if (! $previous instanceof Throwable) {
+            $previous = null;
+        }
+
         parent::__construct($message, $code, $previous);
 
         $this->type = $type;
