@@ -19,7 +19,12 @@ class MoyasarTest extends TestCase
 
     public function test_current_version_url_is_constructed_correctly()
     {
-        $this->assertEquals('https://api.moyasar.com/v1', Moyasar::CURRENT_VERSION_URL);
+        $this->assertEquals('https://api.moyasar.com/v1/', Moyasar::CURRENT_VERSION_URL);
+    }
+
+    public function test_current_version_url_must_have_trailing_slash()
+    {
+        $this->assertTrue(preg_match('/.+\/$/', Moyasar::CURRENT_VERSION_URL) == true);
     }
 
     public function test_user_is_able_to_set_and_get_api_key()
