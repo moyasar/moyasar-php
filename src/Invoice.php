@@ -137,7 +137,11 @@ class Invoice extends OnlineResource
     public function update($arguments)
     {
         $this->validateUpdateArguments($arguments);
+
         $response = $this->client->put(InvoiceService::INVOICE_PATH . "/$this->id", $arguments);
+
+        if (! $response['body_assoc']) return;
+
         $this->updateFromArray($response['body_assoc']);
     }
 
@@ -151,6 +155,9 @@ class Invoice extends OnlineResource
     public function cancel()
     {
         $response = $this->client->put(InvoiceService::INVOICE_PATH . "/$this->id/cancel");
+
+        if (! $response['body_assoc']) return;
+
         $this->updateFromArray($response['body_assoc']);
     }
 

@@ -185,6 +185,8 @@ class Payment extends OnlineResource
             'description' => $description
         ]);
 
+        if (! $response['body_assoc']) return;
+
         $this->updateFromArray($response['body_assoc']);
     }
 
@@ -207,6 +209,8 @@ class Payment extends OnlineResource
         $response = $this->client->post(PaymentService::PAYMENT_PATH . "/$this->id/refund", [
             'amount' => $amount
         ]);
+
+        if (! $response['body_assoc']) return;
 
         $this->updateFromArray($response['body_assoc']);
     }
@@ -231,6 +235,8 @@ class Payment extends OnlineResource
             'amount' => $amount
         ]);
 
+        if (! $response['body_assoc']) return;
+
         $this->updateFromArray($response['body_assoc']);
     }
 
@@ -243,6 +249,9 @@ class Payment extends OnlineResource
     public function void()
     {
         $response = $this->client->post(PaymentService::PAYMENT_PATH . "/$this->id/void");
+
+        if (! $response['body_assoc']) return;
+
         $this->updateFromArray($response['body_assoc']);
     }
 
