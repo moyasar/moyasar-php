@@ -9,7 +9,7 @@ use Moyasar\Search;
 
 class PaymentService
 {
-    const PAYMENT_PATH = '/payment';
+    const PAYMENT_PATH = 'payment';
 
     /**
      * @var ClientContract

@@ -36,7 +36,22 @@ TODO
 
 #### Laravel
 
-TODO
+First thing we need to add `moyasar/moyasar` to our Laravel project, to do it we need:
+
+    $ composer require moyasar/moyasar
+
+After that, moyasar services need to be configured, so let us publish the configuration file:
+
+    $ php artisan vendor:publish --provider="Moyasar\Providers\LaravelServiceProvider"
+
+Now edit `config/moyasar.php` and add your API key, by default the API key is read from
+an environment variable called `MOYASAR_API_KEY`, thus `.env` can be used to add the key.
+
+```env
+MOYASAR_API_KEY=<Your_API_Key>
+```
+
+
 
 ## Contributing
 

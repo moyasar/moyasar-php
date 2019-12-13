@@ -9,7 +9,7 @@ use Moyasar\PaginationResult;
 
 class InvoiceService
 {
-    const INVOICE_PATH = '/invoices';
+    const INVOICE_PATH = 'invoices';
 
     /**
      * @var ClientContract
