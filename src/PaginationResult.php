@@ -2,7 +2,7 @@
 
 namespace Moyasar;
 
-class PaginationResult
+class PaginationResult extends Resource
 {
     public $currentPage;
     public $nextPage;
@@ -11,27 +11,15 @@ class PaginationResult
     public $totalCount;
 
     /**
-     * @var \Moyasar\Payment[]|\Moyasar\Invoice[]
+     * Current page items
+     *
+     * @var Payment[]|Invoice[]
      */
     public $result;
 
-    public static function fromArray($meta, $result)
+    public function setResult($result)
     {
-        $pr = new self();
-
-        $pr->result = $result;
-
-        $pr->currentPage    = self::extract($meta, 'current_page');
-        $pr->nextPage       = self::extract($meta, 'next_page');
-        $pr->previousPage   = self::extract($meta, 'prev_page');
-        $pr->totalPages     = self::extract($meta, 'total_pages');
-        $pr->totalCount     = self::extract($meta, 'total_count');
-
-        return $pr;
-    }
-
-    private static function extract($data, $key, $default = null)
-    {
-        return isset($data[$key]) ? $data[$key] : $default;
+        $this->result = $result;
+        return $this;
     }
 }

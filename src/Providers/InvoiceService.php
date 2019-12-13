@@ -131,6 +131,6 @@ class InvoiceService
             return $invoice;
         }, $data['invoices']);
 
-        return PaginationResult::fromArray($meta, $invoices);
+        return PaginationResult::fromArray($meta)->setResult($invoices);
     }
 }

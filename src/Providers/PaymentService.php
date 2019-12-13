@@ -64,6 +64,6 @@ class PaymentService
             return $payment;
         }, $data['payments']);
 
-        return PaginationResult::fromArray($meta, $payments);
+        return PaginationResult::fromArray($meta)->setResult($payments);
     }
 }
