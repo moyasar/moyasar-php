@@ -171,6 +171,15 @@ class Payment extends OnlineResource
         return $value;
     }
 
+    protected static function transformBack($key, $value)
+    {
+        if ($key == 'source') {
+            return $value->toSnakeArray();
+        }
+
+        return $value;
+    }
+
     /**
      * @param string $description
      * @throws Exceptions\ApiException

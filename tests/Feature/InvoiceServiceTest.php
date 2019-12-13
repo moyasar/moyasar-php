@@ -41,6 +41,21 @@ class InvoiceServiceTest extends TestCase
         $this->assertInvoiceDataValid($invoice, $invoiceData);
     }
 
+    public function test_invoice_can_be_serialized_to_array_correctly()
+    {
+        $service = $this->mockInvoiceService(200, 'invoice/invoice.json');
+
+        $invoice = $service->fetch('915fc838-f2c6-46ec-be44-4a93c9500f5f');
+
+        $this->assertTrue($invoice instanceof Invoice);
+
+        $array = $invoice->toSnakeArray();
+
+        $this->assertTrue(is_array($array['payments']));
+
+        $this->assertTrue(is_array($array['payments'][0]['source']));
+    }
+
     public function test_invoice_instance_has_client_instance()
     {
         $service = $this->mockInvoiceService(200, 'invoice/invoice.json');

@@ -125,6 +125,17 @@ class Invoice extends OnlineResource
         return $value;
     }
 
+    protected static function transformBack($key, $value)
+    {
+        if ($key == 'payments') {
+            return array_map(function ($p) {
+                return $p->toSnakeArray();
+            }, $value);
+        }
+
+        return $value;
+    }
+
     /**
      * Update the current invoice instance
      *

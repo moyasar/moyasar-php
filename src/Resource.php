@@ -125,7 +125,7 @@ abstract class Resource
                 continue;
             }
 
-            $json[static::camelToSnake($key)] = static::transformBack($key, $value);
+            $data[static::camelToSnake($key)] = static::transformBack($key, $value);
         }
 
         return $data;
