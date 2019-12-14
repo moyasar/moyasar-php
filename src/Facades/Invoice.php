@@ -7,8 +7,8 @@ use Moyasar\Providers\InvoiceService;
 
 /**
  * @method static \Moyasar\Invoice create($arguments)
- * @methid static \Moyasar\Invoice fetch($id)
- * @methid static \Moyasar\PaginationResult all($query = null)
+ * @method static \Moyasar\Invoice fetch($id)
+ * @method static \Moyasar\PaginationResult all($query = null)
  *
  * @see \Moyasar\Providers\InvoiceService
  *

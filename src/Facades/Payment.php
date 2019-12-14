@@ -6,8 +6,8 @@ use Illuminate\Support\Facades\Facade;
 use Moyasar\Providers\PaymentService;
 
 /**
- * @methid static \Moyasar\Payment fetch($id)
- * @methid static \Moyasar\PaginationResult all($query = null)
+ * @method static \Moyasar\Payment fetch($id)
+ * @method static \Moyasar\PaginationResult all($query = null)
  *
  * @see \Moyasar\Providers\PaymentService
  *
