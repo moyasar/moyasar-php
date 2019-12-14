@@ -5,6 +5,15 @@ namespace Moyasar\Facades;
 use Illuminate\Support\Facades\Facade;
 use Moyasar\Providers\PaymentService;
 
+/**
+ * @methid static \Moyasar\Payment fetch($id)
+ * @methid static \Moyasar\PaginationResult all($query = null)
+ *
+ * @see \Moyasar\Providers\PaymentService
+ *
+ * Class Payment
+ * @package Moyasar\Facades
+ */
 class Payment extends Facade
 {
     /**

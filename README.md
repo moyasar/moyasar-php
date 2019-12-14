@@ -193,6 +193,19 @@ public function __construct(PaymentService $paymentService)
 }
 ```
 
+---
+
+Or if you want a quick way to use these services, you can use the `Payment` and `Invoice` facades:
+
+- `Moyasar\Facades\Payment`
+- `Moyasar\Facades\Invoice`
+
+For example:
+
+```php
+$payment = \Moyasar\Facades\Payment::fetch('id');
+```
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/moyasar-php. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](contributor-covenant.org) code of conduct.

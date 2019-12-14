@@ -5,6 +5,16 @@ namespace Moyasar\Facades;
 use Illuminate\Support\Facades\Facade;
 use Moyasar\Providers\InvoiceService;
 
+/**
+ * @method static \Moyasar\Invoice create($arguments)
+ * @methid static \Moyasar\Invoice fetch($id)
+ * @methid static \Moyasar\PaginationResult all($query = null)
+ *
+ * @see \Moyasar\Providers\InvoiceService
+ *
+ * Class Invoice
+ * @package Moyasar\Facades
+ */
 class Invoice extends Facade
 {
     /**
