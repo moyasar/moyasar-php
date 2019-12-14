@@ -122,7 +122,7 @@ $payment->void();
 
 #### Invoice
 
-For invoices, fetching and listing them is the same payments instead we use `InvoiceService`.
+For invoices, fetching and listing them is the same as payments, instead we use `InvoiceService`.
 
 Although, we can use the API to create a new invoice, by doing the following:
 
