@@ -32,7 +32,76 @@ You can install it via [composer](https://getcomposer.org/)
 
 #### In a Standard Project
 
-TODO
+After installing the library using composer and including `autoload.php`, the API key need
+to be set in order to use the services.
+
+```php
+include_once 'vendor/autoload.php';
+
+\Moyasar\Moyasar::setApiKey('api-key');
+```
+
+Setup is complete, create an instance of the service you need and start using it.
+
+#### Payment
+
+Note: Moyasar does not allow creating payments using the API (with some exceptions), instead you can use
+the [payment form](https://moyasar.com/docs/payments/create-payment/mpf/). That is why, wrapper libraries does not support it.
+
+---
+
+To fetch a payment, just simply do the following:
+
+```php
+$paymentService = new \Moyasar\Providers\PaymentService();
+
+$payment = $paymentService->fetch('ae5e8c6a-1622-45a5-b7ca-9ead69be722e');
+```
+
+An instance of `Payment` will be returned, that has the data in addition to being able
+to perform operations like `update`, `refund`, `capture`, `void` on that payment instance,
+which we will get back to later.
+
+---
+
+To list payments associated with your account, simply do the following:
+
+```php
+$paymentService = new \Moyasar\Providers\PaymentService();
+
+$paginationResult = $paymentService->all();
+
+$payments = $paginationResult->result;
+```
+
+The `all` method will return an instance of `PaginationResult` this contains meta data
+about our result, like `currentPage`, `totalPages` etc...
+
+To get the payments from this object, we just read the `result` property of that object.
+
+---
+
+The `all` method accepts an instance of `Search` or an array, this allows us to filter
+results and move along pages. It is quite simple to use:
+
+```php
+$search = \Moyasar\Search::query()->status('paid')->page(2);
+
+$paginationResult = $paymentService->all($search);
+```
+
+The following methods are supported:
+
+- `id($id)`
+- `status($status)`
+- `source($source)`
+- `page($page)`
+- `createdAfter($date)`
+- `createdBefore($date)`
+
+---
+
+#### Invoice
 
 #### Laravel
 
