@@ -1,6 +1,6 @@
 {
   "name": "moyasar/moyasar",
-  "description": "Laravel/PHP wrapper library for Moyasar payment services",
+  "description": "PHP/Laravel wrapper library for Moyasar payment services",
   "keywords": [
     "moyasar",
     "payment",
