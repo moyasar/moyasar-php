@@ -101,7 +101,60 @@ The following methods are supported:
 
 ---
 
+Once we fetch the desired payment, we can either `update` the description, `refund` it,
+`capture` it, or `void` it.
+
+```php
+$payment->update('new description here');
+
+// OR
+
+$payment->refund(1000); // 10.00 SAR
+
+// OR
+
+$payment->capture(1000);
+
+// OR
+
+$payment->void();
+```
+
 #### Invoice
+
+For invoices, fetching and listing them is the same payments instead we use `InvoiceService`.
+
+Although, we can use the API to create a new invoice, by doing the following:
+
+```php
+$invoiceService = new \Moyasar\Providers\InvoiceService();
+
+$invoiceService->create([
+    'amount' => 1000000, // 10000.00 SAR
+    'currency' => 'SAR',
+    'description' => 'iPhone XII Purchase',
+    'callback_url' => 'http://www.example.com/invoice-status-changed', // Optional
+    'expired_at' => '2020-01-20' // Optional
+]);
+```
+
+---
+
+With an instance of `Invoice`, we can either `update`, or `cancel` a given instance.
+
+```php
+$invoice->update([
+    'amount' => 900000, // 9000.00 SAR
+    'currency' => 'SAR',
+    'description' => 'iPhone XII Purchase (Updated)',
+    'callback_url' => 'http://www.example.com/invoice-status-changed', // Optional
+    'expired_at' => '2020-01-25' // Optional
+]);
+
+// OR
+
+$invoice->cancel();
+```
 
 #### Laravel
 
