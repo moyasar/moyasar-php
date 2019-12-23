@@ -2,10 +2,12 @@
 
 namespace Tests\Feature;
 
+use Mockery;
 use Moyasar\Contracts\HttpClient;
 use Moyasar\CreditCard;
 use Moyasar\Exceptions\ValidationException;
 use Moyasar\Payment;
+use Moyasar\Providers\PaymentService;
 use Moyasar\Sadad;
 use ReflectionClass;
 use Tests\TestCase;
@@ -161,6 +163,26 @@ class PaymentServiceTest extends TestCase
         $this->expectException(ValidationException::class);
 
         $payment->refund(0);
+    }
+
+    public function test_payment_refunded_amount_can_be_null()
+    {
+        $double = Mockery::mock(HttpClient::class);
+
+        $response = $this->formatResponse(json_encode($this->getSinglePaymentRaw()), 200);
+
+        $double->shouldReceive('get')
+            ->andReturn($response);
+
+        $double->shouldReceive('post')
+            ->with(PaymentService::PAYMENT_PATH . "/ae5e8c6a-1622-45a5-b7ca-9ead69be722e/refund", [])
+            ->andReturn($response);
+
+        $service = new PaymentService($double);
+
+        $payment = $service->fetch('ae5e8c6a-1622-45a5-b7ca-9ead69be722e');
+
+        $payment->refund(null);
     }
 
     protected function getSinglePaymentRaw()

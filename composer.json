@@ -11,10 +11,13 @@
     "mada",
     "master",
     "card",
-    "american",
-    "express",
     "sadad",
-    "laravel"
+    "laravel",
+    "apple",
+    "pay",
+    "capture",
+    "void",
+    "credit"
   ],
   "type": "library",
   "license": "MIT",

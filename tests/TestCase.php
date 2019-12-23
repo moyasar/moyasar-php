@@ -71,7 +71,7 @@ abstract class TestCase extends BaseTestCase
      * @param int $status
      * @return array
      */
-    private function formatResponse($response, $status)
+    protected function formatResponse($response, $status)
     {
         return [
             'status' => $status,

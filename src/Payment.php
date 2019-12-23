@@ -2,6 +2,7 @@
 
 namespace Moyasar;
 
+use GuzzleHttp\Exception\InvalidArgumentException;
 use Moyasar\Exceptions\ValidationException;
 use Moyasar\Providers\PaymentService;
 
@@ -197,7 +198,7 @@ class Payment extends OnlineResource
         // A fix, because Moyasar won't return an updated instance of the payment
         if (! $response['body_assoc']) {
             $response = $this->client->get(PaymentService::PAYMENT_PATH . "/$this->id");
-        };
+        }
 
         $this->updateFromArray($response['body_assoc']);
     }
@@ -210,17 +211,25 @@ class Payment extends OnlineResource
      * @throws ValidationException
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function refund($amount)
+    public function refund($amount = null)
     {
-        if ($amount <= 0) {
+        if ($amount !== null && !is_int($amount)) {
+            throw new InvalidArgumentException('amount must be an int type');
+        }
+
+        if ($amount !== null && $amount <= 0) {
             throw new ValidationException('Refund arguments are invalid', [
                 'amount' => ['Amount must be a positive integer']
             ]);
         }
 
-        $response = $this->client->post(PaymentService::PAYMENT_PATH . "/$this->id/refund", [
-            'amount' => $amount
-        ]);
+        $data = [];
+
+        if ($amount) {
+            $data['amount'] = $amount;
+        }
+
+        $response = $this->client->post(PaymentService::PAYMENT_PATH . "/$this->id/refund", $data);
 
         $this->updateFromArray($response['body_assoc']);
     }
@@ -235,15 +244,23 @@ class Payment extends OnlineResource
      */
     public function capture($amount)
     {
-        if ($amount <= 0) {
+        if ($amount !== null && !is_int($amount)) {
+            throw new InvalidArgumentException('amount must be an int type');
+        }
+
+        if ($amount !== null && $amount <= 0) {
             throw new ValidationException('Capture arguments are invalid', [
                 'amount' => ['Amount must be a positive integer']
             ]);
         }
 
-        $response = $this->client->post(PaymentService::PAYMENT_PATH . "/$this->id/capture", [
-            'amount' => $amount
-        ]);
+        $data = [];
+
+        if ($amount) {
+            $data['amount'] = $amount;
+        }
+
+        $response = $this->client->post(PaymentService::PAYMENT_PATH . "/$this->id/capture", $data);
 
         // TODO: Make sure response returns something
         if (! $response['body_assoc']) return;
