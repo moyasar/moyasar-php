@@ -19,7 +19,7 @@ class ValidationException extends BaseException
             $errorMessages .= $key . ': ' . implode(', ', $value) . "\n";
         }
 
-        $message .= "\n\nErrors:\n" . $errorMessages;
+        $message .= "\nErrors:\n" . $errorMessages;
 
         parent::__construct($message, $code, $previous);
 
