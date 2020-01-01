@@ -13,6 +13,14 @@ class ValidationException extends BaseException
 
     public function __construct($message, $errors, $code = 0, Throwable $previous = null)
     {
+        $errorMessages = '';
+
+        foreach ($errors as $key => $value) {
+            $errorMessages .= $key . ': ' . implode(', ', $value) . "\n";
+        }
+
+        $message .= "\n\nErrors:\n" . $errorMessages;
+
         parent::__construct($message, $code, $previous);
 
         $this->errors = $errors;
