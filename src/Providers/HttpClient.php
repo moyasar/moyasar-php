@@ -58,7 +58,7 @@ class HttpClient implements HttpClientContract
                 $type = isset($responseBody['type']) ? $responseBody['type'] : '';
                 $errors = isset($responseBody['errors']) ? $responseBody['errors'] : [];
 
-                throw new ApiException($message, $type, $errors, 0, $exception);
+                throw new ApiException($message, $type, $errors, $response->getStatusCode(), $exception);
             }
 
             throw $exception;
