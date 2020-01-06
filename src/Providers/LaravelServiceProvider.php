@@ -45,6 +45,9 @@ class LaravelServiceProvider extends ServiceProvider
 
         $this->mergeConfigFrom($path, 'moyasar');
 
-        Moyasar::setApiKey($this->app->make('config')->get('moyasar.key'));
+        $config = $this->app->make('config');
+
+        Moyasar::setApiKey($config->get('moyasar.key'));
+        Moyasar::setPublishableApiKey($config->get('moyasar.publishable_key'));
     }
 }

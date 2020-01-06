@@ -15,4 +15,18 @@ return [
 
     'key' => env('MOYASAR_API_KEY'),
 
+
+    /*
+    |--------------------------------------------------------------------------
+    | Moyasar Publishable API Key
+    |--------------------------------------------------------------------------
+    |
+    | This key is used for payment forms on the frontend
+    |
+    |
+    |
+    */
+
+    'publishable_key' => env('MOYASAR_API_PUBLISHABLE_KEY'),
+
 ];

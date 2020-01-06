@@ -15,6 +15,12 @@ class Moyasar
      */
     private static $apiKey;
 
+    /**
+     * Moyasar Service API Publishable Key
+     * @var string
+     */
+    private static $publishableApiKey;
+
     public static function setApiKey($apiKey)
     {
         self::$apiKey = $apiKey;
@@ -23,5 +29,15 @@ class Moyasar
     public static function getApiKey()
     {
         return self::$apiKey;
+    }
+
+    public static function setPublishableApiKey($publishableApiKey)
+    {
+        self::$publishableApiKey = $publishableApiKey;
+    }
+
+    public static function getPublishableApiKey()
+    {
+        return self::$publishableApiKey;
     }
 }
