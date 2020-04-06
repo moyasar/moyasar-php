@@ -1,0 +1,3 @@
+/.gitignore     export-ignore
+/tests          export-ignore
+/phpunit.xml    export-ignore

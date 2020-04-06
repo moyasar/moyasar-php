@@ -1,0 +1,30 @@
+{
+  "id": "12d0b9c1-d562-4afb-b1c3-0c12a7557aa2",
+  "status": "initiated",
+  "amount": 500,
+  "fee": 0,
+  "currency": "SAR",
+  "refunded": 0,
+  "refunded_at": null,
+  "captured": 0,
+  "captured_at": null,
+  "voided_at": null,
+  "description": "Food Delivery Payment",
+  "amount_format": "5.00 SAR",
+  "fee_format": "0.00 SAR",
+  "refunded_format": "0.00 SAR",
+  "captured_format": "0.00 SAR",
+  "invoice_id": null,
+  "ip": "5.156.41.246",
+  "callback_url": "http://www.example.com/payment_callback",
+  "created_at": "2019-01-21T14:29:02.557Z",
+  "updated_at": "2019-01-21T14:29:02.557Z",
+  "source": {
+    "type": "sadad",
+    "username": "aliioe",
+    "error_code": null,
+    "message": null,
+    "transaction_id": null,
+    "transaction_url": null
+  }
+}
