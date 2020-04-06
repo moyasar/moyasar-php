@@ -8,7 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * Nothing New
 
 
-## [1.0.0] - TBD
+## [1.0.0] - 2020-04-06
 
 This version of the library is a complete reimplementation from ground up.
 Please checkout the following sections to see what changed
@@ -160,7 +160,7 @@ $invoiceListing->totalPages; // Total Pages
 * First Release
 
 
-[Unreleased]: https://github.com/olivierlacan/keep-a-changelog/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/moyasar/moyasar-php/compare/1.0.0...HEAD
 [1.0.0]: https://github.com/moyasar/moyasar-php/releases/tag/1.0.0
 [0.5.0]: https://github.com/moyasar/moyasar-php/releases/tag/0.5.0
 [v0.4.3]: https://github.com/moyasar/moyasar-php/releases/tag/v0.4.3
