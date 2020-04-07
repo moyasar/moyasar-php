@@ -1,6 +1,6 @@
 # moyasar-php
 
-[![PHP version](https://badge.fury.io/ph/moyasar%2Fmoyasar-php.svg)](https://badge.fury.io/ph/moyasar%2Fmoyasar-php)
+[![PHP version](https://badge.fury.io/ph/moyasar%2Fmoyasar.svg)](https://badge.fury.io/ph/moyasar%2Fmoyasar)
 
 Moyasar PHP wrapper library
 
