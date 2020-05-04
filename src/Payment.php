@@ -242,7 +242,7 @@ class Payment extends OnlineResource
      * @throws ValidationException
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function capture($amount)
+    public function capture($amount = null)
     {
         if ($amount !== null && !is_int($amount)) {
             throw new InvalidArgumentException('amount must be an int type');
