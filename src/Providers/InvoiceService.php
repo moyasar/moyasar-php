@@ -6,6 +6,7 @@ use Moyasar\Contracts\HttpClient as ClientContract;
 use Moyasar\Exceptions\ValidationException;
 use Moyasar\Invoice;
 use Moyasar\PaginationResult;
+use Moyasar\Search;
 
 class InvoiceService
 {
