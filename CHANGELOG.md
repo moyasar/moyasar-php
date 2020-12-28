@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 * Nothing New
 
-## [1.1.0] - 2020-12-28
+## [1.0.2] - 2020-12-28
 
 Upgraded GuzzleHttp version in composer.json
 
