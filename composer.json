@@ -40,7 +40,7 @@
     }
   ],
   "require": {
-    "guzzlehttp/guzzle": "^6.3.0",
+    "guzzlehttp/guzzle": "^6.3|^7.0",
     "ext-json": "*"
   },
   "require-dev": {
