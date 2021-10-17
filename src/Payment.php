@@ -169,6 +169,10 @@ class Payment extends OnlineResource
             return Sadad::fromArray($value);
         }
 
+        if ($key == 'source' && is_array($value) && $value['type'] == 'applepay') {
+            return ApplePay::fromArray($value);
+        }
+
         return $value;
     }
 

@@ -2,9 +2,9 @@
 
 namespace Moyasar;
 
-class CreditCard extends Source
+class ApplePay extends Source
 {
-    protected $type = 'creditcard';
+    protected $type = 'applepay';
 
     /**
      * @var string
@@ -31,13 +31,6 @@ class CreditCard extends Source
      * @var string
      */
     public $message;
-
-    /**
-     * Transaction URL
-     *
-     * @var string
-     */
-    public $transactionUrl;
 
     /**
      * Gateway ID

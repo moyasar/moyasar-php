@@ -25,6 +25,8 @@
     "name": "Power Rangers",
     "number": "XXXX-XXXX-XXXX-1111",
     "message": "Succeeded!",
-    "transaction_url": "https://api.moyasar.com/v1/transaction_auths/3f99d8fd-9b5b-430a-9f32-ee4e73c8f5da/form"
+    "transaction_url": "https://api.moyasar.com/v1/transaction_auths/3f99d8fd-9b5b-430a-9f32-ee4e73c8f5da/form",
+    "gateway_id": "moyasar_ap_je1iUidxhrh74257S891wvW",
+    "reference_number": "125478454231"
   }
 }
