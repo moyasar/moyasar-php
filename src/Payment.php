@@ -173,6 +173,10 @@ class Payment extends OnlineResource
             return ApplePay::fromArray($value);
         }
 
+        if ($key == 'source' && is_array($value) && $value['type'] == 'stcpay') {
+            return StcPay::fromArray($value);
+        }
+
         return $value;
     }
 

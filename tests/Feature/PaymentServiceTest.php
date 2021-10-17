@@ -29,6 +29,32 @@ class PaymentServiceTest extends TestCase
         $this->assertPaymentDataValid($payment, $paymentData);
     }
 
+    public function test_applepay_payment_is_fetched_correctly()
+    {
+        $service = $this->mockPaymentService(200, 'payment/payment_applepay.json');
+
+        $payment = $service->fetch('dbe05dc9-c19c-4a36-bd70-17f98bf60df9');
+
+        $this->assertTrue($payment instanceof Payment);
+
+        $paymentData = $this->getSinglePaymentRaw('payment_applepay.json');
+
+        $this->assertPaymentDataValid($payment, $paymentData);
+    }
+
+    public function test_stcpay_payment_is_fetched_correctly()
+    {
+        $service = $this->mockPaymentService(200, 'payment/payment_stcpay.json');
+
+        $payment = $service->fetch('dbe05dc9-c19c-4a36-bd70-17f98bf60df9');
+
+        $this->assertTrue($payment instanceof Payment);
+
+        $paymentData = $this->getSinglePaymentRaw('payment_stcpay.json');
+
+        $this->assertPaymentDataValid($payment, $paymentData);
+    }
+
     public function test_payment_instance_has_client_instance()
     {
         $service = $this->mockPaymentService(200, 'payment/payment.json');
@@ -191,9 +217,9 @@ class PaymentServiceTest extends TestCase
         $this->assertEquals('refunded', $payment->status);
     }
 
-    protected function getSinglePaymentRaw()
+    protected function getSinglePaymentRaw(string $file = 'payment.json')
     {
-        return json_decode(file_get_contents(__DIR__ . '/../raw-responses/payment/payment.json'), true);
+        return json_decode(file_get_contents(__DIR__ . "/../raw-responses/payment/$file"), true);
     }
 
     protected function getSinglePaymentUpdatedRaw()
