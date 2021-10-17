@@ -155,6 +155,13 @@ class Payment extends OnlineResource
      */
     public $voidedAt;
 
+    /**
+     * Extra payment metadata information
+     *
+     * @var array
+     */
+    public $metadata = [];
+
     protected function __construct()
     {
     }

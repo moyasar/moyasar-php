@@ -280,6 +280,10 @@ class PaymentServiceTest extends TestCase
             $this->assertEquals($paymentData['voided_at'], $payment->voidedAt);
         }
 
+        if (isset($paymentData['metadata'])) {
+            $this->assertEquals($paymentData['metadata'], $payment->metadata);
+        }
+
         $sourceData = $paymentData['source'];
 
         if ($payment->source instanceof CreditCard) {
