@@ -1,78 +1,79 @@
 {
-  "name": "moyasar/moyasar",
-  "description": "PHP/Laravel wrapper library for Moyasar payment services",
-  "keywords": [
-    "moyasar",
-    "payment",
-    "invoice",
-    "pay",
-    "refund",
-    "visa",
-    "mada",
-    "master",
-    "card",
-    "sadad",
-    "laravel",
-    "apple",
-    "pay",
-    "capture",
-    "void",
-    "credit"
-  ],
-  "type": "library",
-  "license": "MIT",
-  "prefer-stable": true,
-  "minimum-stability": "dev",
-  "authors": [
-    {
-      "name": "Ali Alhoshaiyan",
-      "email": "alialhoshaiyan@gmail.com"
+    "name": "moyasar/moyasar",
+    "description": "PHP/Laravel wrapper library for Moyasar payment services",
+    "keywords": [
+        "moyasar",
+        "payment",
+        "invoice",
+        "pay",
+        "refund",
+        "visa",
+        "mada",
+        "master",
+        "card",
+        "sadad",
+        "laravel",
+        "apple",
+        "pay",
+        "capture",
+        "void",
+        "credit"
+    ],
+    "type": "library",
+    "license": "MIT",
+    "prefer-stable": true,
+    "minimum-stability": "dev",
+    "authors": [
+        {
+            "name": "Ali Alhoshaiyan",
+            "email": "alialhoshaiyan@gmail.com"
+        },
+        {
+            "name": "Sohib H Algotimel",
+            "email": "s@sgh.sa",
+            "homepage": "https://sgh.sa"
+        },
+        {
+            "name": "Moyasar Development Team",
+            "email": "developers@moyasar.com",
+            "homepage": "https://moyasar.com/"
+        }
+    ],
+    "require": {
+        "php": "^7.2|^8.0",
+        "guzzlehttp/guzzle": "^6.3|^7.0",
+        "ext-json": "*"
     },
-    {
-      "name": "Sohib H Algotimel",
-      "email": "s@sgh.sa",
-      "homepage": "https://sgh.sa"
+    "require-dev": {
+        "phpunit/phpunit": "^8.5.19|^9.5.8",
+        "mockery/mockery": "^1.2.4"
     },
-    {
-      "name": "Moyasar Development Team",
-      "email": "developers@moyasar.com",
-      "homepage": "https://moyasar.com/"
+    "suggest": {
+        "laravel/framework": "Allows Moyasar payment services to be auto injected into current app container"
+    },
+    "autoload": {
+        "psr-4": {
+            "Moyasar\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "aliases": {
+                "Payment": "Moyasar\\Facades\\Payment",
+                "Invoice": "Moyasar\\Facades\\Invoice"
+            },
+            "providers": [
+                "Moyasar\\Providers\\LaravelServiceProvider"
+            ]
+        }
+    },
+    "scripts": {
+        "test": "phpunit --colors=always",
+        "test:ci": "composer test -- --verbose --coverage-text --coverage-clover=coverage.xml"
     }
-  ],
-  "require": {
-    "guzzlehttp/guzzle": "^6.3|^7.0",
-    "ext-json": "*"
-  },
-  "require-dev": {
-    "phpunit/phpunit": "5.7.27",
-    "mockery/mockery": "1.2.4"
-  },
-  "suggest": {
-    "laravel/framework": "Allows Moyasar payment services to be auto injected into current app container"
-  },
-  "autoload": {
-    "psr-4": {
-      "Moyasar\\": "src/"
-    }
-  },
-  "autoload-dev": {
-    "psr-4": {
-      "Tests\\": "tests/"
-    }
-  },
-  "extra": {
-    "laravel": {
-      "aliases": {
-        "Payment": "Moyasar\\Facades\\Payment",
-        "Invoice": "Moyasar\\Facades\\Invoice"
-      },
-      "providers": [
-        "Moyasar\\Providers\\LaravelServiceProvider"
-      ]
-    }
-  },
-  "scripts": {
-    "test": "phpunit --colors=always",
-    "test:ci": "composer test -- --verbose --coverage-text --coverage-clover=coverage.xml"
-  }
 }

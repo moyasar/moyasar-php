@@ -1,0 +1,32 @@
+{
+  "id": "dbe05dc9-c19c-4a36-bd70-17f98bf60df9",
+  "status": "failed",
+  "amount": 100,
+  "fee": 0,
+  "currency": "SAR",
+  "refunded": 0,
+  "refunded_at": null,
+  "captured": 0,
+  "captured_at": null,
+  "voided_at": null,
+  "description": "moyasar 94",
+  "amount_format": "1.00 SAR",
+  "fee_format": "0.00 SAR",
+  "refunded_format": "0.00 SAR",
+  "captured_format": "0.00 SAR",
+  "invoice_id": null,
+  "ip": null,
+  "callback_url": null,
+  "created_at": "2021-09-07T12:21:01.256Z",
+  "updated_at": "2021-09-07T12:27:02.477Z",
+  "metadata": null,
+  "source": {
+    "type": "stcpay",
+    "mobile": "055xxxxxxx",
+    "reference_number": "32843287468",
+    "branch": null,
+    "cashier": null,
+    "transaction_url": "https://api.moyasar.com/v1/stc_pays/dbe05dc9-c19c-4a36-bd70-17f98bf60df9/proceed?otp_token=123",
+    "message": "Allowed time frame for transaction has been expired."
+  }
+}

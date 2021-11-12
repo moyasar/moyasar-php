@@ -2,7 +2,9 @@
 
 namespace Tests\Feature;
 
+use GuzzleHttp\Exception\InvalidArgumentException;
 use Mockery;
+use Moyasar\ApplePay;
 use Moyasar\Contracts\HttpClient;
 use Moyasar\CreditCard;
 use Moyasar\Exceptions\ValidationException;
@@ -23,6 +25,32 @@ class PaymentServiceTest extends TestCase
         $this->assertTrue($payment instanceof Payment);
 
         $paymentData = $this->getSinglePaymentRaw();
+
+        $this->assertPaymentDataValid($payment, $paymentData);
+    }
+
+    public function test_applepay_payment_is_fetched_correctly()
+    {
+        $service = $this->mockPaymentService(200, 'payment/payment_applepay.json');
+
+        $payment = $service->fetch('dbe05dc9-c19c-4a36-bd70-17f98bf60df9');
+
+        $this->assertTrue($payment instanceof Payment);
+
+        $paymentData = $this->getSinglePaymentRaw('payment_applepay.json');
+
+        $this->assertPaymentDataValid($payment, $paymentData);
+    }
+
+    public function test_stcpay_payment_is_fetched_correctly()
+    {
+        $service = $this->mockPaymentService(200, 'payment/payment_stcpay.json');
+
+        $payment = $service->fetch('dbe05dc9-c19c-4a36-bd70-17f98bf60df9');
+
+        $this->assertTrue($payment instanceof Payment);
+
+        $paymentData = $this->getSinglePaymentRaw('payment_stcpay.json');
 
         $this->assertPaymentDataValid($payment, $paymentData);
     }
@@ -169,7 +197,10 @@ class PaymentServiceTest extends TestCase
     {
         $double = Mockery::mock(HttpClient::class);
 
-        $response = $this->formatResponse(json_encode($this->getSinglePaymentRaw()), 200);
+        $payment = $this->getSinglePaymentRaw();
+        $payment['status'] = 'refunded';
+
+        $response = $this->formatResponse(json_encode($payment), 200);
 
         $double->shouldReceive('get')
             ->andReturn($response);
@@ -183,11 +214,12 @@ class PaymentServiceTest extends TestCase
         $payment = $service->fetch('ae5e8c6a-1622-45a5-b7ca-9ead69be722e');
 
         $payment->refund(null);
+        $this->assertEquals('refunded', $payment->status);
     }
 
-    protected function getSinglePaymentRaw()
+    protected function getSinglePaymentRaw(string $file = 'payment.json')
     {
-        return json_decode(file_get_contents(__DIR__ . '/../raw-responses/payment/payment.json'), true);
+        return json_decode(file_get_contents(__DIR__ . "/../raw-responses/payment/$file"), true);
     }
 
     protected function getSinglePaymentUpdatedRaw()
@@ -204,7 +236,7 @@ class PaymentServiceTest extends TestCase
     {
         return json_decode(file_get_contents(__DIR__ . '/../raw-responses/payment/payment_list.json'), true);
     }
-    
+
     /**
      * Asserts that a Payment instance equals some raw data
      *
@@ -248,6 +280,10 @@ class PaymentServiceTest extends TestCase
             $this->assertEquals($paymentData['voided_at'], $payment->voidedAt);
         }
 
+        if (isset($paymentData['metadata'])) {
+            $this->assertEquals($paymentData['metadata'], $payment->metadata);
+        }
+
         $sourceData = $paymentData['source'];
 
         if ($payment->source instanceof CreditCard) {
@@ -258,6 +294,8 @@ class PaymentServiceTest extends TestCase
             $this->assertEquals($sourceData['number'], $payment->source->number);
             $this->assertEquals($sourceData['message'], $payment->source->message);
             $this->assertEquals($sourceData['transaction_url'], $payment->source->transactionUrl);
+            $this->assertEquals($sourceData['gateway_id'], $payment->source->gatewayId);
+            $this->assertEquals($sourceData['reference_number'], $payment->source->referenceNumber);
         }
 
         if ($payment->source instanceof Sadad) {
@@ -268,6 +306,17 @@ class PaymentServiceTest extends TestCase
             $this->assertEquals($sourceData['message'], $payment->source->message);
             $this->assertEquals($sourceData['transaction_id'], $payment->source->transactionId);
             $this->assertEquals($sourceData['transaction_url'], $payment->source->transactionUrl);
+        }
+
+        if ($payment->source instanceof ApplePay) {
+            $this->assertEquals('applepay', $sourceData['type']);
+
+            $this->assertEquals($sourceData['company'], $payment->source->company);
+            $this->assertEquals($sourceData['name'], $payment->source->name);
+            $this->assertEquals($sourceData['number'], $payment->source->number);
+            $this->assertEquals($sourceData['message'], $payment->source->message);
+            $this->assertEquals($sourceData['gateway_id'], $payment->source->gatewayId);
+            $this->assertEquals($sourceData['reference_number'], $payment->source->referenceNumber);
         }
     }
 }

@@ -155,6 +155,13 @@ class Payment extends OnlineResource
      */
     public $voidedAt;
 
+    /**
+     * Extra payment metadata information
+     *
+     * @var array
+     */
+    public $metadata = [];
+
     protected function __construct()
     {
     }
@@ -167,6 +174,14 @@ class Payment extends OnlineResource
 
         if ($key == 'source' && is_array($value) && $value['type'] == 'sadad') {
             return Sadad::fromArray($value);
+        }
+
+        if ($key == 'source' && is_array($value) && $value['type'] == 'applepay') {
+            return ApplePay::fromArray($value);
+        }
+
+        if ($key == 'source' && is_array($value) && $value['type'] == 'stcpay') {
+            return StcPay::fromArray($value);
         }
 
         return $value;
