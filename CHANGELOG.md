@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 * Nothing New
 
+## [1.1.1] - 2021-11-12
+
+Update guzzlehttp/psr7 to resolve CVE-2022-24775.
+
+## [1.1.0] - 2021-11-12
+
+Add new payment source parameters and Apple Pay source.
+
 ## [1.0.2] - 2020-12-28
 
 Upgraded GuzzleHttp version in composer.json
