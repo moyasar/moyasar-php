@@ -1,3 +1,6 @@
+# This project has been archived and is no longer maintained.
+
+
 # moyasar-php
 
 [![PHP version](https://badge.fury.io/ph/moyasar%2Fmoyasar.svg)](https://badge.fury.io/ph/moyasar%2Fmoyasar)
